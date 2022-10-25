@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cups.png-37fa82aa365987910861ef20a43c972b.stex"
+path="res://.import/smoothie_color.png-9c1fb6c3f8cc9eb4488648c9c89eb86f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/cups.png"
-dest_files=[ "res://.import/cups.png-37fa82aa365987910861ef20a43c972b.stex" ]
+source_file="res://images/smoothie_color.png"
+dest_files=[ "res://.import/smoothie_color.png-9c1fb6c3f8cc9eb4488648c9c89eb86f.stex" ]
 
 [params]
 
