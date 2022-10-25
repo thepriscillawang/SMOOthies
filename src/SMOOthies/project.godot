@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="SMOOthies"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneLoader="*res://Scenes/SceneLoader.gd"
 
 [gui]
 
