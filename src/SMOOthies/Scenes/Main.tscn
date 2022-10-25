@@ -1,35 +1,65 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://images/button_start_r.png" type="Texture" id=2]
+[ext_resource path="res://fonts/batuphat_script/Batuphat Script.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://images/button_start_r_hover.png" type="Texture" id=4]
+[ext_resource path="res://images/button_start_r_pressed.png" type="Texture" id=5]
+[ext_resource path="res://images/smoothie_color.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+outline_size = 4
+outline_color = Color( 0.686275, 0.658824, 0.658824, 1 )
+font_data = ExtResource( 3 )
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 511.0 ]
+}
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1080.0
+[node name="Welcome" type="ColorRect" parent="."]
+margin_right = 1024.0
 margin_bottom = 600.0
-color = Color( 1, 0, 0, 1 )
+color = Color( 0.976471, 0.658824, 0.203922, 1 )
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Sprite" type="Sprite" parent="Welcome"]
+position = Vector2( 306, 140 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+offset = Vector2( 512, 220 )
+
+[node name="Label" type="Label" parent="Welcome"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -37.5
-margin_top = -7.0
-margin_right = 37.5
-margin_bottom = 7.0
+margin_left = -386.0
+margin_top = -54.0
+margin_right = 385.0
+margin_bottom = 127.0
+custom_colors/font_color = Color( 0.54902, 0.803922, 0.894118, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 1 )
 text = "SMOOthies"
+align = 1
+valign = 1
 
-[node name="StartButton" type="Button" parent="ColorRect"]
+[node name="StartButton" type="TextureButton" parent="Welcome"]
 anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.537
 anchor_bottom = 1.0
-margin_left = -43.0
-margin_top = -172.0
-margin_right = 44.0
-margin_bottom = -152.0
-text = "Start Game!"
+margin_left = -154.0
+margin_top = -139.0
+margin_right = 116.112
+margin_bottom = -81.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
 
-[connection signal="pressed" from="ColorRect/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Welcome/StartButton" to="." method="_on_StartButton_pressed"]
