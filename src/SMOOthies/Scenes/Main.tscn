@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://images/button_start_r.png" type="Texture" id=2]
 [ext_resource path="res://fonts/milky_coffee/Milky Coffee.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://images/button_start_r_hover.png" type="Texture" id=4]
 [ext_resource path="res://images/button_start_r_pressed.png" type="Texture" id=5]
+[ext_resource path="res://images/cups.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 128
@@ -17,12 +18,16 @@ __meta__ = {
 "_edit_vertical_guides_": [ 511.0 ]
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Welcome" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 1, 0.815686, 0.513726, 1 )
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Sprite" type="Sprite" parent="Welcome"]
+texture = ExtResource( 6 )
+offset = Vector2( 512, 240 )
+
+[node name="Label" type="Label" parent="Welcome"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -36,7 +41,7 @@ text = "SMOOthies"
 align = 1
 valign = 1
 
-[node name="StartButton" type="TextureButton" parent="ColorRect"]
+[node name="StartButton" type="TextureButton" parent="Welcome"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.537
@@ -49,4 +54,4 @@ texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
 
-[connection signal="pressed" from="ColorRect/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Welcome/StartButton" to="." method="_on_StartButton_pressed"]
