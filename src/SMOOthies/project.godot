@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 SceneLoader="*res://Scenes/SceneLoader.gd"
 Global="*res://Scenes/Global.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
