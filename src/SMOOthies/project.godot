@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 SceneLoader="*res://Scenes/SceneLoader.gd"
+Global="*res://Scenes/Global.gd"
 
 [gui]
 

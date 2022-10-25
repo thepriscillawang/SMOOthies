@@ -11,7 +11,6 @@ func _load_intro():
 func _on_StartButton_pressed():
 	print("button pressed")
 	_load_intro()
-	pass # Replace with function body.
 
 func _testfunction():
 	print("test function called")
