@@ -1,33 +1,49 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Intro.gd" type="Script" id=1]
+[ext_resource path="res://fonts/handwriting_draft/handwriting-draft_free-version.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://images/button_order-ingredients.png" type="Texture" id=3]
+[ext_resource path="res://images/button_order-ingredients_hover.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+outline_color = Color( 0.0470588, 0.00392157, 0.00392157, 1 )
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 512.0 ]
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1080.0
+margin_right = 1024.0
 margin_bottom = 600.0
-color = Color( 0, 0.231373, 0.666667, 1 )
+color = Color( 0.901961, 0.956863, 0.745098, 1 )
 
 [node name="premise of game" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -214.0
-margin_top = -7.0
-margin_right = 214.0
-margin_bottom = 7.0
+margin_left = -407.0
+margin_top = -180.0
+margin_right = 404.0
+margin_bottom = -18.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "In this scene, users will be introduced to the premise of the game."
+align = 1
+valign = 1
 
-[node name="OrderIngredients" type="Button" parent="ColorRect"]
-margin_left = 348.0
-margin_top = 344.0
-margin_right = 433.0
-margin_bottom = 364.0
-text = "Ingredients"
+[node name="OrderIngredients" type="TextureButton" parent="ColorRect"]
+margin_left = 235.0
+margin_top = 478.0
+margin_right = 790.0
+margin_bottom = 555.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
 
 [connection signal="pressed" from="ColorRect/OrderIngredients" to="." method="_on_OrderIngredients_pressed"]
