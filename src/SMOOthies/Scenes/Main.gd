@@ -15,4 +15,5 @@ func _on_StartButton_pressed():
 func _testfunction():
 	print("test function called")
 	print("this is Sandee")
+	print("this is Hailey")
 	print("this is Binbin")
