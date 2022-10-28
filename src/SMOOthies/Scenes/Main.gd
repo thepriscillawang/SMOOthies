@@ -7,10 +7,14 @@ func _ready():
 func _load_intro():
 	SceneLoader.main = self
 	SceneLoader._load_scene("Intro")
+		
 
 func _on_StartButton_pressed():
-	print("button pressed")
-	_load_intro()
+	$AudioStreamPlayer.stream = load("res://Sounds/button.wav")
+	$AudioStreamPlayer.play()
+	
+	
+	
 
 func _testfunction():
 	print("test function called")

@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scenes/Main.gd" type="Script" id=1]
 [ext_resource path="res://images/button_start_r.png" type="Texture" id=2]
 [ext_resource path="res://fonts/batuphat_script/Batuphat Script.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://images/button_start_r_hover.png" type="Texture" id=4]
@@ -14,7 +13,6 @@ outline_color = Color( 0.686275, 0.658824, 0.658824, 1 )
 font_data = ExtResource( 3 )
 
 [node name="Root" type="Node2D"]
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [ 511.0 ]
 }
@@ -61,5 +59,7 @@ margin_bottom = -81.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Welcome/StartButton"]
 
 [connection signal="pressed" from="Welcome/StartButton" to="." method="_on_StartButton_pressed"]
