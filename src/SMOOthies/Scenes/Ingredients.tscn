@@ -57,6 +57,86 @@ margin_top = 134.0
 margin_right = 681.0
 margin_bottom = 148.0
 
+[node name="SubDragonfruit" type="Button" parent="IngredientsPurchase"]
+margin_left = 568.0
+margin_top = 198.0
+margin_right = 594.0
+margin_bottom = 224.0
+text = "-"
+
+[node name="AddDragonfruit" type="Button" parent="IngredientsPurchase"]
+margin_left = 723.0
+margin_top = 198.0
+margin_right = 749.0
+margin_bottom = 224.0
+text = "+"
+
+[node name="CurrDragonfruitLabel" type="Label" parent="IngredientsPurchase"]
+margin_left = 639.0
+margin_top = 206.0
+margin_right = 679.0
+margin_bottom = 220.0
+
+[node name="SubMilk" type="Button" parent="IngredientsPurchase"]
+margin_left = 569.0
+margin_top = 269.0
+margin_right = 595.0
+margin_bottom = 295.0
+text = "-"
+
+[node name="AddMilk" type="Button" parent="IngredientsPurchase"]
+margin_left = 725.0
+margin_top = 268.0
+margin_right = 751.0
+margin_bottom = 294.0
+text = "+"
+
+[node name="CurrMilkLabel" type="Label" parent="IngredientsPurchase"]
+margin_left = 639.0
+margin_top = 273.0
+margin_right = 679.0
+margin_bottom = 287.0
+
+[node name="SubIce" type="Button" parent="IngredientsPurchase"]
+margin_left = 568.0
+margin_top = 339.0
+margin_right = 594.0
+margin_bottom = 365.0
+text = "-"
+
+[node name="AddIce" type="Button" parent="IngredientsPurchase"]
+margin_left = 724.0
+margin_top = 340.0
+margin_right = 750.0
+margin_bottom = 366.0
+text = "+"
+
+[node name="CurrIceLabel" type="Label" parent="IngredientsPurchase"]
+margin_left = 637.0
+margin_top = 344.0
+margin_right = 677.0
+margin_bottom = 358.0
+
+[node name="SubCup" type="Button" parent="IngredientsPurchase"]
+margin_left = 568.0
+margin_top = 411.0
+margin_right = 594.0
+margin_bottom = 437.0
+text = "-"
+
+[node name="AddCup" type="Button" parent="IngredientsPurchase"]
+margin_left = 724.0
+margin_top = 412.0
+margin_right = 750.0
+margin_bottom = 438.0
+text = "+"
+
+[node name="CurrCupLabel" type="Label" parent="IngredientsPurchase"]
+margin_left = 637.0
+margin_top = 416.0
+margin_right = 677.0
+margin_bottom = 430.0
+
 [node name="IngredientsMusic" type="AudioStreamPlayer" parent="."]
 
 [node name="ConfirmPurchase" type="TextureButton" parent="."]
@@ -72,4 +152,12 @@ texture_hover = ExtResource( 5 )
 [connection signal="pressed" from="IngredientsPurchase/AddMangos" to="." method="_on_AddMangos_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/SubPineapple" to="." method="_on_SubPineapple_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/AddPineapple" to="." method="_on_AddPineapple_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/SubDragonfruit" to="." method="_on_SubDragonfruit_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/AddDragonfruit" to="." method="_on_AddDragonfruit_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/SubMilk" to="." method="_on_SubMilk_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/AddMilk" to="." method="_on_AddMilk_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/SubIce" to="." method="_on_SubIce_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/AddIce" to="." method="_on_AddIce_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/SubCup" to="." method="_on_SubCup_pressed"]
+[connection signal="pressed" from="IngredientsPurchase/AddCup" to="." method="_on_AddCup_pressed"]
 [connection signal="pressed" from="ConfirmPurchase" to="." method="_on_ConfirmPurchase_pressed"]
