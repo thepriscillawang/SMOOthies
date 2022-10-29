@@ -1,7 +1,20 @@
 extends Node2D
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-func _on_OrderIngredients_pressed():
-		SceneLoader._load_scene("Ingredients")
+func _ready():
+	print("hello")
+
+func _load_Intro():
+	var Main = SceneLoader._load_scene("Intro")
+	Main.name = "Intro"
+
+func _on_Order_pressed():
+	_play_sound()
+
+func _play_sound():
+	$OrderIngredientsButtonSound.stream = load("res://sounds/startsound.wav")
+	$OrderIngredientsButtonSound.connect("finished", self, "_load_ingredients_scene")
+	$OrderIngredientsButtonSound.play()
+
+func _load_ingredients_scene():
+	SceneLoader._change_scene("Ingredients")
+

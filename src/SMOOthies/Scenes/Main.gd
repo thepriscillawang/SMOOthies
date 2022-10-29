@@ -1,19 +1,22 @@
 extends Node2D
 
 func _ready():
-	print("hello")
-
-# Loads the intro scene.
-func _load_intro():
-	SceneLoader.main = self
-	SceneLoader._load_scene("Intro")
+	print("Hi, world!")
+	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
+	$WelcomeMusic.play()
+	
+func _load_Main():
+	var Main = SceneLoader._load_scene("Main")
+	Main.name = "Main"
 
 func _on_StartButton_pressed():
-	print("button pressed")
-	_load_intro()
+	_play_sound()
 
-func _testfunction():
-	print("test function called")
-	print("this is Sandee")
-	print("this is Hailey")
-	print("this is Binbin")
+func _play_sound():
+	$StartButtonSound.stream = load("res://sounds/startsound.wav")
+	$StartButtonSound.connect("finished", self, "_load_intro_scene")
+	$StartButtonSound.play()
+
+func _load_intro_scene():
+#	get_tree().change_scene("res://Intro.tscn") 
+	SceneLoader._change_scene("Intro")
