@@ -16,6 +16,37 @@ margin_right = 1024.0
 margin_bottom = 600.0
 color = Color( 0.988235, 0.807843, 0.698039, 1 )
 
+[node name="Label" type="Label" parent="IntroPage"]
+margin_left = 4.0
+margin_top = 40.0
+margin_right = 1025.0
+margin_bottom = 487.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Welcome and aloha! You, Hawaii’s rising entrepreneurial star, have just opened a street stand to sell the world’s best tropical smoothie, bar none! 
+
+Your SMOOthies Stand is located on the edge of famous Waikiki Beach and in the heart of one of the state’s most popular tourist destinations.
+
+As the stand’s owner and manager, your mission is to sell as many delicious fruit smoothies to the tourists, residents, and patrons of Waikiki as you possibly 
+can, every day for two weeks, from 10 a.m. to 8 p.m.
+
+If you raise $500 or more over the two-week period, you can open up a storefront on 
+Kalakaua Avenue and you’ll be on your way to building a solid business. However, if you fail to raise at least $500, you will go bankrupt. [insert sad emoji]
+
+You’ll begin with $100 in cash. To keep your smoothie stand operating, you will need to buy sufficient tropical ingredients and supplies: pineapple, mango,
+ and dragon fruit, along with ice, milk, and cup sets (cups, lids, and straws). Finding and creating the perfect recipe proportions will be critical to your success!
+ 
+To make enough money, you will need to set a sales price that produces enough revenue to buy what you need each day and still turn a profit. But be careful –
+ overpricing your product can cause sales to drop.
+ 
+If sales do fall, you can hold a two-for-one sale, stay open longer, or put up balloons. Also, be sure to listen to your customers’ comments and keep or change
+ the smoothie recipe in response to their likes and dislikes.
+ 
+Some days will be great – there are parades and sports events that will increase sales; but stay alert - your ingredients may spoil and those Waikiki birds can fly 
+off with your fruit!
+ 
+Good luck and we hope to see you with your own Kalakaua Avenue storefront very soon!
+"
+
 [node name="OrderIngredientsButtonSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 
