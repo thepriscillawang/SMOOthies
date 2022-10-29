@@ -11,7 +11,7 @@ func _on_Order_pressed():
 	_play_sound()
 
 func _play_sound():
-	$OrderIngredientsButtonSound.stream = load("res://sounds/startsound.wav")
+	$OrderIngredientsButtonSound.stream = load("res://Sounds/softbutton.wav")
 	$OrderIngredientsButtonSound.connect("finished", self, "_load_ingredients_scene")
 	$OrderIngredientsButtonSound.play()
 

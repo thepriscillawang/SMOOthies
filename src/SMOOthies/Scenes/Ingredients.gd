@@ -12,7 +12,7 @@ func _on_ConfirmPurchase_pressed():
 	_play_sound()
 
 func _play_sound():
-	$IngredientsMusic.stream = load("res://sounds/startsound.wav")
+	$IngredientsMusic.stream = load("res://Sounds/softbutton.wav")
 	$IngredientsMusic.connect("finished", self, "_load_Main_scene")
 	$IngredientsMusic.play()
 
