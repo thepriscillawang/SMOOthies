@@ -13,7 +13,7 @@ func _on_StartButton_pressed():
 	_play_sound()
 
 func _play_sound():
-	$StartButtonSound.stream = load("res://sounds/startsound.wav")
+	$StartButtonSound.stream = load("res://Sounds/softbutton.wav")
 	$StartButtonSound.connect("finished", self, "_load_intro_scene")
 	$StartButtonSound.play()
 

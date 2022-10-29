@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/HawaiiDrum.wav-1360d1ecc4e722a0028812f799cedcbe.sample"
+path="res://.import/HawaiiDrum.wav-4cf7d943cd7bf81d5a19c28557b14f51.sample"
 
 [deps]
 
-source_file="res://sounds/HawaiiDrum.wav"
-dest_files=[ "res://.import/HawaiiDrum.wav-1360d1ecc4e722a0028812f799cedcbe.sample" ]
+source_file="res://Sounds/HawaiiDrum.wav"
+dest_files=[ "res://.import/HawaiiDrum.wav-4cf7d943cd7bf81d5a19c28557b14f51.sample" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/startsound.wav-53d06951e5e52424796bd3aae60d719b.sample"
+path="res://.import/softbutton.wav-ce54a51a029e6dfe5a9e53f080eef479.sample"
 
 [deps]
 
-source_file="res://Sounds/startsound.wav"
-dest_files=[ "res://.import/startsound.wav-53d06951e5e52424796bd3aae60d719b.sample" ]
+source_file="res://Sounds/softbutton.wav"
+dest_files=[ "res://.import/softbutton.wav-ce54a51a029e6dfe5a9e53f080eef479.sample" ]
 
 [params]
 

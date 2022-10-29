@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/DramaButtonSound.wav-5cdae06eb5478cf76bd4d06ea2bb4e81.sample"
+path="res://.import/DramaButtonSound.wav-aa9c877805fa3e083f8207b14e420267.sample"
 
 [deps]
 
-source_file="res://sounds/DramaButtonSound.wav"
-dest_files=[ "res://.import/DramaButtonSound.wav-5cdae06eb5478cf76bd4d06ea2bb4e81.sample" ]
+source_file="res://Sounds/DramaButtonSound.wav"
+dest_files=[ "res://.import/DramaButtonSound.wav-aa9c877805fa3e083f8207b14e420267.sample" ]
 
 [params]
 
