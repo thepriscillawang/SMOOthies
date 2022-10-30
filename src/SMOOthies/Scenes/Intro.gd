@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	print("hello")
-	$IntroBKGMusic.stream = load("res://Sounds/HawaiiWave.wav")
+	$IntroBKGMusic.stream = load("res://Sounds/HawaiiDrum.wav")
 	$IntroBKGMusic.play()
 
 func _load_Intro():

@@ -77,5 +77,6 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 2 )
 
 [node name="IntroBKGMusic" type="AudioStreamPlayer" parent="."]
+volume_db = -11.361
 
 [connection signal="pressed" from="Order" to="." method="_on_Order_pressed"]

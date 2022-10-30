@@ -1,5 +1,7 @@
 extends Node2D
 
+
+
 func _update_ingredient_label(ingredient):
 	if (ingredient == "mango"):
 		$IngredientsPurchase/CurrMangoLabel.text = str(Global.curr_mango)
@@ -30,9 +32,11 @@ func _load_Ingredients():
 
 func _on_ConfirmPurchase_pressed():
 	_play_sound()
+	
+	
 
 func _play_sound():
-	$IngredientsMusic.stream = load("res://sounds/startsound.wav")
+	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.connect("finished", self, "_load_Main_scene")
 	$IngredientsMusic.play()
 
