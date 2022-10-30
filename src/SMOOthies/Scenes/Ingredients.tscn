@@ -7,6 +7,7 @@
 [ext_resource path="res://images/button_buy_hover.png" type="Texture" id=5]
 
 [node name="Ingredients" type="Node2D"]
+scale = Vector2( 0.998665, 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_vertical_guides_": [ 512.0 ]
@@ -18,9 +19,9 @@ margin_bottom = 40.0
 texture = ExtResource( 1 )
 
 [node name="SubMangos" type="Button" parent="IngredientsPurchase"]
-margin_left = 568.0
+margin_left = 567.758
 margin_top = 57.0
-margin_right = 594.0
+margin_right = 593.758
 margin_bottom = 83.0
 text = "-"
 
@@ -141,12 +142,37 @@ margin_bottom = 430.0
 
 [node name="ConfirmPurchase" type="TextureButton" parent="."]
 margin_left = 408.0
-margin_top = 490.0
+margin_top = 474.0
 margin_right = 615.0
-margin_bottom = 547.0
+margin_bottom = 531.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 5 )
+
+[node name="HelpButton" type="Button" parent="."]
+margin_left = 703.0
+margin_top = 494.0
+margin_right = 745.0
+margin_bottom = 514.0
+text = "Help"
+
+[node name="DayLabel" type="Label" parent="."]
+margin_left = 235.314
+margin_top = 540.0
+margin_right = 275.314
+margin_bottom = 554.0
+
+[node name="MoneyLabel" type="Label" parent="."]
+margin_left = 235.314
+margin_top = 567.0
+margin_right = 275.314
+margin_bottom = 581.0
+
+[node name="EventLabel" type="Label" parent="."]
+margin_left = 667.891
+margin_top = 551.0
+margin_right = 707.891
+margin_bottom = 565.0
 
 [connection signal="pressed" from="IngredientsPurchase/SubMangos" to="." method="_on_SubMangos_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/AddMangos" to="." method="_on_AddMangos_pressed"]
@@ -161,3 +187,4 @@ texture_hover = ExtResource( 5 )
 [connection signal="pressed" from="IngredientsPurchase/SubCup" to="." method="_on_SubCup_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/AddCup" to="." method="_on_AddCup_pressed"]
 [connection signal="pressed" from="ConfirmPurchase" to="." method="_on_ConfirmPurchase_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]

@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 func _update_ingredient_label(ingredient):
 	if (ingredient == "mango"):
 		$IngredientsPurchase/CurrMangoLabel.text = str(Global.curr_mango)
@@ -17,14 +15,19 @@ func _update_ingredient_label(ingredient):
 		$IngredientsPurchase/CurrCupLabel.text = str(Global.curr_cup)
 
 func _ready():
+	print("Hello, ingredients!")
 	_update_ingredient_label("mango")
 	_update_ingredient_label("pineapple")
 	_update_ingredient_label("dragonfruit")
 	_update_ingredient_label("milk")
 	_update_ingredient_label("ice")
 	_update_ingredient_label("cup")
-	print("Hello, ingredients!")
-
+	
+	# update day label
+	$DayLabel.text = "Day " + str(Global.curr_day) + " of 14"
+	$MoneyLabel.text = "$ " + str(Global.curr_money)
+	$EventLabel.text = "Event: " + str(Global.special_events[Global.curr_day - 1].event)
+	
 func _load_Ingredients():
 	var Ingredients = SceneLoader._load_scene("Ingredients")
 	Ingredients.name = "Ingredients"
@@ -32,17 +35,15 @@ func _load_Ingredients():
 
 func _on_ConfirmPurchase_pressed():
 	_play_sound()
-	
-	
 
 func _play_sound():
 	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
-	$IngredientsMusic.connect("finished", self, "_load_Main_scene")
+	$IngredientsMusic.connect("finished", self, "_load_Recipe_scene")
 	$IngredientsMusic.play()
 
-func _load_Main_scene():
+func _load_Recipe_scene():
 #	get_tree().change_scene("res://Main.tscn") 
-	SceneLoader._change_scene("Main")
+	SceneLoader._change_scene("Recipe")
 
 #MANGO AREA
 func _on_SubMangos_pressed():
@@ -106,10 +107,11 @@ func _on_SubCup_pressed():
 	_update_ingredient_label("cup")
 	print("- Cup pressed. Total Cup: ",  Global.curr_cup)
 
-
-
 func _on_AddCup_pressed():
 	Global.curr_cup = Global.curr_cup + 1
 	_update_ingredient_label("cup")
 	print("+ Cup pressed. Total Cup: ",  Global.curr_cup)
+
+func _on_HelpButton_pressed():
+	SceneLoader._change_scene("IngredientsHelp")
 

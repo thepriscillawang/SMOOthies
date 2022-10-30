@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Recipe.gd" type="Script" id=1]
+
+[node name="Recipe" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 512.0 ]
+}
+
+[node name="IngredientsMusic" type="AudioStreamPlayer" parent="."]
+
+[node name="HelpIngredientButton" type="Button" parent="."]
+margin_left = 703.0
+margin_top = 494.0
+margin_right = 745.0
+margin_bottom = 514.0
+text = "Help"
+
+[node name="ConfirmRecipeButton" type="Button" parent="."]
+margin_left = 460.0
+margin_top = 494.0
+margin_right = 569.0
+margin_bottom = 514.0
+shortcut_in_tooltip = false
+text = "Confirm Recipe"
+
+[node name="BackToStoreButton" type="Button" parent="."]
+margin_left = 252.0
+margin_top = 493.0
+margin_right = 350.0
+margin_bottom = 513.0
+text = "Back to STore"
+
+[connection signal="pressed" from="BackToStoreButton" to="." method="_on_BackToStoreButton_pressed"]
