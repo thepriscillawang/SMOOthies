@@ -1,21 +1,33 @@
 extends Node
 
-var total_days = 1
-var curr_day = 0
-var curr_money = 100.00
+var total_days = 3
 var req_amount_to_open_store = 0
 var special_events = []
 
-var curr_mango = 0
-var curr_pineapple = 0
-var curr_dragonfruit = 0
-var curr_milk = 0
-var curr_ice = 0
-var curr_cup = 0
+var curr_day
+var curr_money
+var curr_mango
+var curr_pineapple
+var curr_dragonfruit
+var curr_milk
+var curr_ice
+var curr_cup
 
-var total_income = 100
-var total_expenses = 70
-var net_profit = 0
+var total_income
+var total_expenses
+
+func _reset_values():
+	curr_day = 0
+	curr_money = 100.00
+	curr_mango = 0
+	curr_pineapple = 0
+	curr_dragonfruit = 0
+	curr_milk = 0
+	curr_ice = 0
+	curr_cup = 0
+	total_income = 100
+	total_expenses = 70
+	special_events = []
 
 # a list of special events to generate from
 var _events = [
@@ -38,12 +50,4 @@ var _ingredient_events = [
 
 #generate random events
 func _ready():
-	randomize()
-	for i in range(14):
-		special_events.append(get_events())
-	print(typeof(special_events))
-
-#generates list of events 
-func get_events():
-	var random_events = _events[randi() % _events.size()]
-	return random_events
+	print("Global Called")

@@ -2,8 +2,18 @@ extends Node2D
 
 func _ready():
 	print("Hi, world!")
+	Global._reset_values()
 	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
 	$WelcomeMusic.play()
+	
+	randomize()
+	for i in range(14):
+		Global.special_events.append(get_events())
+
+func get_events():
+	var random_events = Global._events[randi() % Global._events.size()]
+	return random_events
+	
 	
 func _load_Main():
 	var Main = SceneLoader._load_scene("Main")
