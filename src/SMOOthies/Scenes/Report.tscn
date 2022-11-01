@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Report.gd" type="Script" id=1]
+
+[node name="Report" type="Node2D"]
+position = Vector2( 2, 7 )
+script = ExtResource( 1 )
+
+[node name="FinalReport" type="Label" parent="."]
+margin_left = 474.0
+margin_top = 145.0
+margin_right = 550.0
+margin_bottom = 159.0
+text = "Final Report"
+
+[node name="Labels" type="Label" parent="."]
+margin_left = 438.0
+margin_top = 204.0
+margin_right = 526.0
+margin_bottom = 218.0
+text = "Total Income:
+Total Expenses:"
+
+[node name="TotalIncome" type="Label" parent="."]
+margin_left = 562.0
+margin_top = 206.0
+margin_right = 661.0
+margin_bottom = 237.0
+text = "0000"
+
+[node name="TotalExpense" type="Label" parent="."]
+margin_left = 563.0
+margin_top = 225.0
+margin_right = 662.0
+margin_bottom = 256.0
+text = "0000"
+
+[node name="Label-NetProfitLoss" type="Label" parent="."]
+margin_left = 429.0
+margin_top = 277.0
+margin_right = 528.0
+margin_bottom = 308.0
+text = "Net Profit/Loss:"
+
+[node name="NetProfit" type="Label" parent="."]
+margin_left = 562.0
+margin_top = 279.0
+margin_right = 661.0
+margin_bottom = 310.0
+text = "0000"

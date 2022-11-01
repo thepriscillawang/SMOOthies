@@ -8,3 +8,12 @@ func _ready():
 func _on_BackToStoreButton_pressed():
 	SceneLoader._change_scene("Ingredients")
 	pass # Replace with function body.
+
+func _on_HelpIngredientButton_pressed():
+	SceneLoader._change_scene("RecipeHelp")
+	pass # Replace with function body.
+
+
+func _on_ConfirmRecipeButton_pressed():
+	SceneLoader._change_scene("Simulation")
+	pass # Replace with function body.

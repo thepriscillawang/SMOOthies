@@ -25,7 +25,7 @@ func _ready():
 	# update day label
 	$DayLabel.text = "Day " + str(Global.curr_day) + " of 14"
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
-	$EventLabel.text = "Event: " + str(Global.special_events[Global.curr_day - 1].event)
+	$EventLabel.text = "Upcoming Event: " + str(Global.special_events[Global.curr_day - 1].event)
 	
 	$IngredientsMusic.stream = load("res://Sounds/HawaiiDrum.wav")
 	$IngredientsMusic.play()

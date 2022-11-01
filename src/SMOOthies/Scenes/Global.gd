@@ -12,17 +12,31 @@ var curr_milk = 0
 var curr_ice = 0
 var curr_cup = 0
 
+var total_income = 100
+var total_expenses = 70
+var net_profit = 0
+
 # a list of special events to generate from
 var _events = [
-	{event ="event 1", populatin =1}, 
-	{event = "event 2", population =2}, 
-	{event = "event 3",population = 3},
-	{event = "none", population = 4}
+	{event ="King Kamehameha Floral Parade", population = 1}, 
+	{event = "Prince Kuhio Festival", population =2}, 
+	{event = "Long Weekend",population = 3},
+	{event = "Ironman Triathlon", population = 4},
+	{event = "Honolulu Marathon", population = 4},
+	{event = "Rainy Day", population = 4},
+	{event = "Brown Water Advisory", population = 4},
+	{event = "Normal Day", population = 4}
+]
+
+var _ingredient_events = [
+	{event = "Oh, no! All of your ice has melted. You’ll need to buy more."},
+	{event = "Bad luck! The milk has spoiled. Make sure to restock!"},
+	{event = "You got an overripe batch of mangoes! You can’t use rotten fruit. Restock."},
+	{event = "Thieving birds! They made off with the dragon fruit! Order more."}
 ]
 
 #generate random events
 func _ready():
-	print("global called")
 	randomize()
 	for i in range(14):
 		special_events.append(get_events())
