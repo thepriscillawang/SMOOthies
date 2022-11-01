@@ -15,6 +15,9 @@ func _update_ingredient_label(ingredient):
 		$IngredientsPurchase/CurrCupLabel.text = str(Global.curr_cup)
 
 func _ready():
+	#update day
+	Global.curr_day = Global.curr_day + 1
+	
 	_update_ingredient_label("mango")
 	_update_ingredient_label("pineapple")
 	_update_ingredient_label("dragonfruit")
@@ -23,7 +26,7 @@ func _ready():
 	_update_ingredient_label("cup")
 	
 	# update day label
-	$DayLabel.text = "Day " + str(Global.curr_day) + " of 14"
+	$DayLabel.text = "Day " + str(Global.curr_day) + " of " + str(Global.total_days)
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	$EventLabel.text = "Upcoming Event: " + str(Global.special_events[Global.curr_day - 1].event)
 	

@@ -5,4 +5,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_FastForwardButton_pressed():
-	SceneLoader._change_scene("Report")
+	if (Global.curr_day < Global.total_days):
+		SceneLoader._change_scene("IngredientsEvent")
+	else:
+		SceneLoader._change_scene("Report")
