@@ -48,3 +48,12 @@ margin_top = 279.0
 margin_right = 661.0
 margin_bottom = 310.0
 text = "0000"
+
+[node name="ContinueButton" type="Button" parent="."]
+margin_left = 488.0
+margin_top = 393.0
+margin_right = 557.0
+margin_bottom = 413.0
+text = "Continue"
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

@@ -1,8 +1,9 @@
 extends Node
 
-var total_days = 3
+var total_days = 1
 var curr_day = 0
 var curr_money = 100.00
+var req_amount_to_open_store = 0
 var special_events = []
 
 var curr_mango = 0

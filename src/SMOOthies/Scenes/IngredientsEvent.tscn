@@ -13,11 +13,11 @@ margin_right = 611.0
 margin_bottom = 449.0
 text = "Order Ingredients"
 
-[node name="Label" type="Label" parent="."]
-margin_left = 442.0
-margin_top = 118.0
-margin_right = 611.0
-margin_bottom = 132.0
-text = "Inventory/Purchasing Help"
+[node name="IngredientsEventLabel" type="Label" parent="."]
+margin_left = 463.0
+margin_top = 189.0
+margin_right = 632.0
+margin_bottom = 203.0
+text = "Ingredient event added here"
 
 [connection signal="pressed" from="OrderIngredientsButton" to="." method="_on_OrderIngredientsButton_pressed"]
