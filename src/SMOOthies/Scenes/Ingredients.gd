@@ -15,7 +15,6 @@ func _update_ingredient_label(ingredient):
 		$IngredientsPurchase/CurrCupLabel.text = str(Global.curr_cup)
 
 func _ready():
-	print("Hello, ingredients!")
 	_update_ingredient_label("mango")
 	_update_ingredient_label("pineapple")
 	_update_ingredient_label("dragonfruit")
@@ -28,6 +27,10 @@ func _ready():
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	$EventLabel.text = "Event: " + str(Global.special_events[Global.curr_day - 1].event)
 	
+	$IngredientsMusic.stream = load("res://Sounds/HawaiiDrum.wav")
+	$IngredientsMusic.play()
+	
+	
 func _load_Ingredients():
 	var Ingredients = SceneLoader._load_scene("Ingredients")
 	Ingredients.name = "Ingredients"
@@ -35,11 +38,13 @@ func _load_Ingredients():
 
 func _on_ConfirmPurchase_pressed():
 	_play_sound()
+	
 
 func _play_sound():
 	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.connect("finished", self, "_load_Recipe_scene")
 	$IngredientsMusic.play()
+	
 
 func _load_Recipe_scene():
 #	get_tree().change_scene("res://Main.tscn") 
@@ -51,6 +56,8 @@ func _on_SubMangos_pressed():
 		Global.curr_mango = Global.curr_mango -1
 	_update_ingredient_label("mango")
 	print("- Mango pressed. Total Mango: ",  Global.curr_mango)
+	
+	
 
 func _on_AddMangos_pressed():
 	Global.curr_mango = Global.curr_mango + 1
