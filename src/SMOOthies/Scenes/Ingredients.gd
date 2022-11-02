@@ -30,8 +30,8 @@ func _ready():
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	$EventLabel.text = "Upcoming Event: " + str(Global.special_events[Global.curr_day - 1].event)
 	
-	$IngredientsMusic.stream = load("res://Sounds/HawaiiDrum.wav")
-	$IngredientsMusic.play()
+	$BackgroundMusic.stream = load("res://Sounds/HawaiiDrum.wav")
+	$BackgroundMusic.play()
 	
 	
 func _load_Ingredients():
@@ -60,7 +60,6 @@ func _on_SubMangos_pressed():
 	_update_ingredient_label("mango")
 	print("- Mango pressed. Total Mango: ",  Global.curr_mango)
 	
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 	
 func _on_AddMangos_pressed():
@@ -68,7 +67,6 @@ func _on_AddMangos_pressed():
 	_update_ingredient_label("mango")
 	print("+ Mango pressed. Total Mango: ",  Global.curr_mango)
 	
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 	
 func _on_SubPineapple_pressed():
@@ -77,7 +75,6 @@ func _on_SubPineapple_pressed():
 	_update_ingredient_label("pineapple")
 	print("- Pineapple pressed. Total Pineapple: ",  Global.curr_pineapple)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 	
 func _on_AddPineapple_pressed():
@@ -85,7 +82,6 @@ func _on_AddPineapple_pressed():
 	_update_ingredient_label("pineapple")
 	print("+ Pineapple pressed. Total Pineapple: ",  Global.curr_pineapple)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_SubDragonfruit_pressed():
@@ -94,7 +90,6 @@ func _on_SubDragonfruit_pressed():
 	_update_ingredient_label("dragonfruit")
 	print("- Dragonfruit pressed. Total Dragonfruit: ",  Global.curr_dragonfruit)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_AddDragonfruit_pressed():
@@ -102,7 +97,6 @@ func _on_AddDragonfruit_pressed():
 	_update_ingredient_label("dragonfruit")
 	print("+ Dragonfruit pressed. Total Dragonfruit: ",  Global.curr_dragonfruit)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_SubMilk_pressed():
@@ -111,7 +105,6 @@ func _on_SubMilk_pressed():
 	_update_ingredient_label("milk")
 	print("+ Milk pressed. Total Milk: ",  Global.curr_milk)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_AddMilk_pressed():
@@ -119,7 +112,6 @@ func _on_AddMilk_pressed():
 	_update_ingredient_label("milk")
 	print("+ Milk pressed. Total Milk: ",  Global.curr_milk)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_SubIce_pressed():
@@ -128,7 +120,6 @@ func _on_SubIce_pressed():
 	_update_ingredient_label("ice")
 	print("- Ice pressed. Total Ice: ",  Global.curr_ice)
 	
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 	
 func _on_AddIce_pressed():
@@ -136,7 +127,6 @@ func _on_AddIce_pressed():
 	_update_ingredient_label("ice")
 	print("+ Ice pressed. Total Ice: ",  Global.curr_ice)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_SubCup_pressed():
@@ -145,7 +135,6 @@ func _on_SubCup_pressed():
 	_update_ingredient_label("cup")
 	print("- Cup pressed. Total Cup: ",  Global.curr_cup)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_AddCup_pressed():
@@ -153,7 +142,6 @@ func _on_AddCup_pressed():
 	_update_ingredient_label("cup")
 	print("+ Cup pressed. Total Cup: ",  Global.curr_cup)
 
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
 	$IngredientsMusic.play()
 
 func _on_HelpButton_pressed():

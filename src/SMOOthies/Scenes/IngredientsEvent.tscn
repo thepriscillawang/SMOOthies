@@ -13,11 +13,25 @@ margin_right = 611.0
 margin_bottom = 449.0
 text = "Order Ingredients"
 
+[node name="Title" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 116.0
+margin_right = 888.0
+margin_bottom = 130.0
+text = "Inventory Loses"
+
 [node name="IngredientsEventLabel" type="Label" parent="."]
-margin_left = 463.0
-margin_top = 189.0
-margin_right = 632.0
-margin_bottom = 203.0
+margin_left = 459.0
+margin_top = 209.0
+margin_right = 641.0
+margin_bottom = 223.0
 text = "Ingredient event added here"
+
+[node name="Ice Melt" type="Label" parent="."]
+margin_left = 367.0
+margin_top = 263.0
+margin_right = 743.0
+margin_bottom = 277.0
+text = "Oh, no! All of your ice has melted. You’ll need to buy more."
 
 [connection signal="pressed" from="OrderIngredientsButton" to="." method="_on_OrderIngredientsButton_pressed"]
