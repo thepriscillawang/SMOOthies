@@ -2,8 +2,8 @@ extends Node2D
 
 func _ready():
 	print("hello")
-	$IntroBKGMusic.stream = load("res://Sounds/HawaiiDrum.wav")
-	$IntroBKGMusic.play()
+#	$IntroBKGMusic.stream = load("res://Sounds/HawaiiDrum.wav")
+#	$IntroBKGMusic.play()
 
 func _load_Intro():
 	var Main = SceneLoader._load_scene("Intro")

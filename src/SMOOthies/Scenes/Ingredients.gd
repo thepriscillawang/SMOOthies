@@ -30,8 +30,8 @@ func _ready():
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	$EventLabel.text = "Upcoming Event: " + str(Global.special_events[Global.curr_day - 1].event)
 	
-	$BackgroundMusic.stream = load("res://Sounds/HawaiiDrum.wav")
-	$BackgroundMusic.play()
+	#$BackgroundMusic.stream = load("res://Sounds/HawaiiDrum.wav")
+	#$BackgroundMusic.play()
 	
 	
 func _load_Ingredients():

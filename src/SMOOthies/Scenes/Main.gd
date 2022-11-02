@@ -3,8 +3,9 @@ extends Node2D
 func _ready():
 	print("Hi, world!")
 	Global._reset_values()
-	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
-	$WelcomeMusic.play()
+	MainMusic.play_music()
+#	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
+#	$WelcomeMusic.play()
 	
 	randomize()
 	for _i in range(14):
