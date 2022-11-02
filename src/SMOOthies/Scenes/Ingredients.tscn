@@ -182,6 +182,100 @@ margin_top = 551.0
 margin_right = 707.891
 margin_bottom = 565.0
 
+[node name="YouCanBuy" type="Label" parent="."]
+margin_left = 795.061
+margin_top = 28.0
+margin_right = 895.061
+margin_bottom = 42.0
+text = "Purchase more supplies:"
+
+[node name="MangoPrice" type="Label" parent="YouCanBuy"]
+margin_left = -9.01208
+margin_top = 35.0
+margin_right = 90.9879
+margin_bottom = 49.0
+text = "10 oz for $5.00 "
+
+[node name="PineapplePrice" type="Label" parent="YouCanBuy"]
+margin_left = -6.00793
+margin_top = 101.0
+margin_right = 93.9921
+margin_bottom = 115.0
+text = "10 oz for $2.50"
+
+[node name="DragonfruitPrice" type="Label" parent="YouCanBuy"]
+margin_left = -6.00806
+margin_top = 171.0
+margin_right = 93.9919
+margin_bottom = 185.0
+text = "10 oz for $7.50"
+
+[node name="MilkPrice" type="Label" parent="YouCanBuy"]
+margin_top = 245.0
+margin_right = 100.0
+margin_bottom = 259.0
+text = "10 oz for $2.50"
+
+[node name="IcePrice" type="Label" parent="YouCanBuy"]
+margin_top = 315.0
+margin_right = 100.0
+margin_bottom = 329.0
+text = "10 oz for $1.00"
+
+[node name="CupSet" type="Label" parent="YouCanBuy"]
+margin_left = 2.00269
+margin_top = 387.0
+margin_right = 113.003
+margin_bottom = 401.0
+text = "10 cups for $1.00"
+
+[node name="YouHave" type="Label" parent="."]
+margin_left = 125.167
+margin_top = 30.0
+margin_right = 225.167
+margin_bottom = 44.0
+text = "You have:"
+
+[node name="CurrMango" type="Label" parent="YouHave"]
+margin_left = -9.01208
+margin_top = 35.0
+margin_right = 90.9879
+margin_bottom = 49.0
+text = "0"
+
+[node name="CurrPineapple" type="Label" parent="YouHave"]
+margin_left = -6.00793
+margin_top = 101.0
+margin_right = 93.9921
+margin_bottom = 115.0
+text = "0"
+
+[node name="CurrDragonfruit" type="Label" parent="YouHave"]
+margin_left = -6.00806
+margin_top = 171.0
+margin_right = 93.9919
+margin_bottom = 185.0
+text = "0"
+
+[node name="CurrMilk" type="Label" parent="YouHave"]
+margin_top = 245.0
+margin_right = 100.0
+margin_bottom = 259.0
+text = "0"
+
+[node name="CurrIce" type="Label" parent="YouHave"]
+margin_top = 315.0
+margin_right = 100.0
+margin_bottom = 329.0
+text = "0"
+
+[node name="CurrCup" type="Label" parent="YouHave"]
+margin_left = 2.00269
+margin_top = 387.0
+margin_right = 113.003
+margin_bottom = 401.0
+text = "0"
+
 [connection signal="pressed" from="IngredientsPurchase/SubMangos" to="." method="_on_SubMangos_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/AddMangos" to="." method="_on_AddMangos_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/SubPineapple" to="." method="_on_SubPineapple_pressed"]

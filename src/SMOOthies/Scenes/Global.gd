@@ -13,8 +13,22 @@ var curr_milk
 var curr_ice
 var curr_cup
 
+var inventory_mango
+var inventory_pineapple
+var inventory_dragonfruit
+var inventory_milk
+var inventory_ice
+var inventory_cup
+
 var total_income
 var total_expenses
+
+var price_mango = 0.50
+var price_pineapple = 0.25
+var price_dragonfruit = 0.75
+var price_milk = 0.25
+var price_ice = 0.25
+var price_cup = 0.1
 
 func _reset_values():
 	curr_day = 0
@@ -28,6 +42,15 @@ func _reset_values():
 	total_income = 100
 	total_expenses = 70
 	special_events = []
+	reset_inventory()
+
+func reset_inventory():
+	inventory_mango = 0
+	inventory_pineapple = 0
+	inventory_dragonfruit = 0
+	inventory_milk = 0
+	inventory_ice = 0
+	inventory_cup = 0
 
 # a list of special events to generate from
 var _events = [

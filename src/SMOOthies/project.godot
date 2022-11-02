@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 SceneLoader="*res://Scenes/SceneLoader.gd"
 Global="*res://Scenes/Global.gd"
 MainMusic="*res://Scenes/MainMusic.tscn"
+Algorithm="*res://Scenes/Algorithm.gd"
 
 [display]
 
