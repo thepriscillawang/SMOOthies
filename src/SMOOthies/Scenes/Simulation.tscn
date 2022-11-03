@@ -1,16 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
+[ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
 
 [node name="Simulation" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 512.0 ]
+}
+
+[node name="BusinessOperation" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
 
 [node name="FastForwardButton" type="Button" parent="."]
-margin_left = 478.0
-margin_top = 394.0
-margin_right = 570.0
-margin_bottom = 414.0
+margin_left = 463.0
+margin_top = 552.0
+margin_right = 555.0
+margin_bottom = 572.0
 text = "Fast Forward"
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
