@@ -2,6 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Algorithm.compare_recipes()
 	pass # Replace with function body.
 
 func _on_FastForwardButton_pressed():

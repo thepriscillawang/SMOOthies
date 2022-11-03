@@ -7,10 +7,47 @@ var price_milk = Global.price_milk
 var price_ice = Global.price_ice
 var price_cup = Global.price_cup
 
+var player_smoothie_recipe = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
+func render_player_recipe():
+	var player_recipe = []
+	for _i in Global.mango_recipe_amount:
+		player_recipe.append("mango")
+	for _i in Global.pineapple_recipe_amount:
+		player_recipe.append("pineapple")
+	for _i in Global.dragonfruit_recipe_amount:
+		player_recipe.append("dragonfruit")
+	for _i in Global.milk_recipe_amount:
+		player_recipe.append("milk")
+	for _i in Global.ice_recipe_amount:
+		player_recipe.append("ice")
+	return player_recipe
+	
+func compare_recipes():
+	var perfect_recipe = ["mango","mango","mango","mango","pineapple","pineapple","pineapple","pineapple","pineapple","pineapple","dragonfruit","dragonfruit","dragonfruit","milk","milk","ice"]
+	var player_recipe = render_player_recipe()
+	print(player_recipe)
+	var num_same_item = 0
+	
+	for i in player_recipe:
+		print(i)
+		if perfect_recipe.has(i):
+			#remove 
+			perfect_recipe.remove(i)
+			print(perfect_recipe)
+			num_same_item = num_same_item + 1
+			print("num_same_item: " + str(num_same_item))
+		else:
+			print('nothing to remove')
+	
+	var perc_similar = num_same_item / 16.0
+		 
+	print("percentage similar: " + str(perc_similar) )
+	
 #buy 10 at a time
 func buy_ingredient(ingredient, add_or_sub):
 	print(ingredient)

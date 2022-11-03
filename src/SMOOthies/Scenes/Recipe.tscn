@@ -8,6 +8,182 @@ __meta__ = {
 "_edit_vertical_guides_": [ 512.0 ]
 }
 
+[node name="Title" type="Label" parent="."]
+margin_left = 492.0
+margin_top = 85.0
+margin_right = 535.0
+margin_bottom = 99.0
+text = "Recipe"
+
+[node name="Mango" type="Label" parent="."]
+margin_left = 330.0
+margin_top = 138.0
+margin_right = 439.0
+margin_bottom = 152.0
+text = "Mangoes per cup"
+
+[node name="oz" type="Label" parent="Mango"]
+margin_left = 344.0
+margin_top = -1.0
+margin_right = 453.0
+margin_bottom = 13.0
+text = "oz"
+
+[node name="SubMangoRecipe" type="Button" parent="Mango"]
+margin_left = 255.0
+margin_top = -4.0
+margin_right = 272.0
+margin_bottom = 16.0
+text = "-"
+
+[node name="AddMangoRecipe" type="Button" parent="Mango"]
+margin_left = 316.0
+margin_top = -5.0
+margin_right = 333.0
+margin_bottom = 15.0
+text = "+"
+
+[node name="MangoAmountRecipe" type="Label" parent="Mango"]
+margin_left = 289.0
+margin_top = -1.0
+margin_right = 329.0
+margin_bottom = 13.0
+
+[node name="Pineapple" type="Label" parent="."]
+margin_left = 330.0
+margin_top = 180.0
+margin_right = 452.0
+margin_bottom = 194.0
+text = "Pineapples per cup"
+
+[node name="oz2" type="Label" parent="Pineapple"]
+margin_left = 343.0
+margin_top = 5.0
+margin_right = 452.0
+margin_bottom = 19.0
+text = "oz"
+
+[node name="SubPineappleRecipe" type="Button" parent="Pineapple"]
+margin_left = 254.0
+margin_top = 2.0
+margin_right = 271.0
+margin_bottom = 22.0
+text = "-"
+
+[node name="AddPineappleRecipe" type="Button" parent="Pineapple"]
+margin_left = 315.0
+margin_top = 1.0
+margin_right = 335.0
+margin_bottom = 21.0
+text = "+"
+
+[node name="PineappleAmountRecipe" type="Label" parent="Pineapple"]
+margin_left = 287.0
+margin_top = 6.0
+margin_right = 327.0
+margin_bottom = 20.0
+
+[node name="Dragonfruit" type="Label" parent="."]
+margin_left = 330.0
+margin_top = 225.0
+margin_right = 452.0
+margin_bottom = 239.0
+text = "Dragonfruit per cup"
+
+[node name="oz3" type="Label" parent="Dragonfruit"]
+margin_left = 343.0
+margin_top = 4.0
+margin_right = 452.0
+margin_bottom = 18.0
+text = "oz"
+
+[node name="SubDragonfruitRecipe" type="Button" parent="Dragonfruit"]
+margin_left = 254.0
+margin_top = 1.0
+margin_right = 271.0
+margin_bottom = 21.0
+text = "-"
+
+[node name="AddDragonfruitRecipe" type="Button" parent="Dragonfruit"]
+margin_left = 315.0
+margin_right = 335.0
+margin_bottom = 20.0
+text = "+"
+
+[node name="DragonfruitAmountRecipe" type="Label" parent="Dragonfruit"]
+margin_left = 287.0
+margin_top = 5.0
+margin_right = 327.0
+margin_bottom = 19.0
+
+[node name="Milk" type="Label" parent="."]
+margin_left = 332.0
+margin_top = 267.0
+margin_right = 455.0
+margin_bottom = 281.0
+text = "Milk per cup"
+
+[node name="oz4" type="Label" parent="Milk"]
+margin_left = 341.0
+margin_top = 6.0
+margin_right = 450.0
+margin_bottom = 20.0
+text = "oz"
+
+[node name="SubMilkRecipe" type="Button" parent="Milk"]
+margin_left = 252.0
+margin_top = 3.0
+margin_right = 269.0
+margin_bottom = 23.0
+text = "-"
+
+[node name="AddMilkRecipe" type="Button" parent="Milk"]
+margin_left = 313.0
+margin_top = 2.0
+margin_right = 333.0
+margin_bottom = 22.0
+text = "+"
+
+[node name="MilkAmountRecipe" type="Label" parent="Milk"]
+margin_left = 285.0
+margin_top = 7.0
+margin_right = 325.0
+margin_bottom = 21.0
+
+[node name="Ice" type="Label" parent="."]
+margin_left = 329.0
+margin_top = 309.0
+margin_right = 452.0
+margin_bottom = 323.0
+text = "Ice per cup"
+
+[node name="oz5" type="Label" parent="Ice"]
+margin_left = 344.0
+margin_top = 5.0
+margin_right = 453.0
+margin_bottom = 19.0
+text = "oz"
+
+[node name="SubIceRecipe" type="Button" parent="Ice"]
+margin_left = 255.0
+margin_top = 2.0
+margin_right = 272.0
+margin_bottom = 22.0
+text = "-"
+
+[node name="AddIceRecipe" type="Button" parent="Ice"]
+margin_left = 316.0
+margin_top = 1.0
+margin_right = 336.0
+margin_bottom = 21.0
+text = "+"
+
+[node name="IceAmountRecipe" type="Label" parent="Ice"]
+margin_left = 288.0
+margin_top = 6.0
+margin_right = 328.0
+margin_bottom = 20.0
+
 [node name="IngredientsMusic" type="AudioStreamPlayer" parent="."]
 
 [node name="HelpIngredientButton" type="Button" parent="."]
@@ -32,6 +208,16 @@ margin_right = 350.0
 margin_bottom = 513.0
 text = "Back to Store"
 
+[connection signal="pressed" from="Mango/SubMangoRecipe" to="." method="_on_SubMangoRecipe_pressed"]
+[connection signal="pressed" from="Mango/AddMangoRecipe" to="." method="_on_AddMangoRecipe_pressed"]
+[connection signal="pressed" from="Pineapple/SubPineappleRecipe" to="." method="_on_SubPineappleRecipe_pressed"]
+[connection signal="pressed" from="Pineapple/AddPineappleRecipe" to="." method="_on_AddPineappleRecipe_pressed"]
+[connection signal="pressed" from="Dragonfruit/SubDragonfruitRecipe" to="." method="_on_SubDragonfruitRecipe_pressed"]
+[connection signal="pressed" from="Dragonfruit/AddDragonfruitRecipe" to="." method="_on_AddDragonfruitRecipe_pressed"]
+[connection signal="pressed" from="Milk/SubMilkRecipe" to="." method="_on_SubMilkRecipe_pressed"]
+[connection signal="pressed" from="Milk/AddMilkRecipe" to="." method="_on_AddMilkRecipe_pressed"]
+[connection signal="pressed" from="Ice/SubIceRecipe" to="." method="_on_SubIceRecipe_pressed"]
+[connection signal="pressed" from="Ice/AddIceRecipe" to="." method="_on_AddIceRecipe_pressed"]
 [connection signal="pressed" from="HelpIngredientButton" to="." method="_on_HelpIngredientButton_pressed"]
 [connection signal="pressed" from="ConfirmRecipeButton" to="." method="_on_ConfirmRecipeButton_pressed"]
 [connection signal="pressed" from="BackToStoreButton" to="." method="_on_BackToStoreButton_pressed"]

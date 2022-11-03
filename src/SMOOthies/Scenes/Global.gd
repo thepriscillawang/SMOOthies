@@ -30,6 +30,12 @@ var price_milk = 0.25
 var price_ice = 0.25
 var price_cup = 0.1
 
+var mango_recipe_amount = 0
+var pineapple_recipe_amount = 0
+var dragonfruit_recipe_amount = 0
+var milk_recipe_amount = 0
+var ice_recipe_amount = 0
+
 func _reset_values():
 	curr_day = 0
 	curr_money = 100.00

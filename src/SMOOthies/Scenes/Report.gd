@@ -14,3 +14,4 @@ func _on_ContinueButton_pressed():
 		SceneLoader._change_scene("ReportTryAgain")
 	else:
 		SceneLoader._change_scene("ReportOpenStore")
+		
