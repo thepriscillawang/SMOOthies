@@ -1,0 +1,17 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.611765, 0.756863, 0.968627, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -54.0
+margin_top = 55.0
+margin_right = 59.0
+margin_bottom = 69.0
+text = "End of Day Report"
