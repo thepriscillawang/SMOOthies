@@ -2,7 +2,6 @@ extends Node2D
 
 
 func update_ingredient_label(ingredient):
-	print("in update_ingredient_label")
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	if (ingredient == "mango"):
 		print("in mango")
@@ -28,6 +27,7 @@ func _ready():
 	#update day
 	Global.curr_day = Global.curr_day + 1
 	
+	print("in ready")
 	update_ingredient_label("mango")
 	update_ingredient_label("pineapple")
 	update_ingredient_label("dragonfruit")

@@ -8,6 +8,7 @@ var price_ice = Global.price_ice
 var price_cup = Global.price_cup
 
 var player_smoothie_recipe = []
+var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -47,6 +48,7 @@ func compare_recipes():
 	var perc_similar = num_same_item / 16.0
 		 
 	print("percentage similar: " + str(perc_similar) )
+	return perc_similar
 	
 #buy 10 at a time
 func buy_ingredient(ingredient, add_or_sub):
@@ -110,3 +112,46 @@ func update_inventory(ingredient, add_or_sub):
 			Global.inventory_cup = Global.inventory_cup + 10
 		elif (add_or_sub == "sub"):
 			Global.inventory_cup = Global.inventory_cup - 10
+
+func calculate_sold_cups():
+	var perc_correct_recipe = compare_recipes()
+	var event_today = Global.special_events[	Global.curr_day - 1]
+	print("In calculate_sold cups")
+	print("perc_correct_recipe: " + str(perc_correct_recipe))
+	print("event_today: " + str(event_today))
+	#get random population
+	rng.randomize()
+	var population = rng.randi_range(event_today.low, event_today.high)
+	print("population low: " + str(event_today.low) + ". population high: " + str(event_today.high) + ". random pop: " + str(population))
+	var max_sold_num = int(population * perc_correct_recipe)
+	calculate_cups_made_with_ingredients(max_sold_num)
+	Global.curr_day_total_pop = max_sold_num
+	print("max_sold_num: " + str(max_sold_num))
+	
+func calculate_cups_made_with_ingredients(max_sold_num):
+	# remove 
+	var num_cups = 0
+	var continue_counting = true
+	while (continue_counting): 
+		if (Global.inventory_mango >= Global.mango_recipe_amount &&
+			Global.inventory_pineapple >= Global.pineapple_recipe_amount &&
+			Global.inventory_dragonfruit >= Global.dragonfruit_recipe_amount &&
+			Global.inventory_milk >= Global.milk_recipe_amount &&
+			Global.inventory_ice >= Global.ice_recipe_amount &&
+			Global.inventory_cup >= 1 &&
+			max_sold_num >= 1
+		): 
+			Global.inventory_mango = Global.inventory_mango - Global.mango_recipe_amount 
+			Global.inventory_pineapple = Global.inventory_pineapple - Global.pineapple_recipe_amount 
+			Global.inventory_dragonfruit = Global.inventory_dragonfruit - Global.dragonfruit_recipe_amount 
+			Global.inventory_milk = Global.inventory_milk - Global.milk_recipe_amount 
+			Global.inventory_ice = Global.inventory_ice - Global.ice_recipe_amount 
+			Global.inventory_cup = Global.inventory_cup - 1
+			num_cups = num_cups + 1	
+			max_sold_num = max_sold_num - 1
+		else:
+			continue_counting = false
+			Global.curr_day_num_cups_sold = num_cups
+			print("stopped counting. total cups made: " + str(num_cups))
+			var money_made = num_cups * 10
+			Global.curr_money = Global.curr_money + money_made
