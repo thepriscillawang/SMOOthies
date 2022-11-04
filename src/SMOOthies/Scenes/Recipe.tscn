@@ -208,6 +208,19 @@ margin_right = 350.0
 margin_bottom = 513.0
 text = "Back to Store"
 
+[node name="OzLabel" type="Label" parent="."]
+margin_left = 495.0
+margin_top = 426.0
+margin_right = 535.0
+margin_bottom = 440.0
+
+[node name="OzLabel2" type="Label" parent="."]
+margin_left = 369.0
+margin_top = 461.0
+margin_right = 757.0
+margin_bottom = 475.0
+text = "Make sure you have exactly 16 oz of ingredients in each cup."
+
 [connection signal="pressed" from="Mango/SubMangoRecipe" to="." method="_on_SubMangoRecipe_pressed"]
 [connection signal="pressed" from="Mango/AddMangoRecipe" to="." method="_on_AddMangoRecipe_pressed"]
 [connection signal="pressed" from="Pineapple/SubPineappleRecipe" to="." method="_on_SubPineappleRecipe_pressed"]

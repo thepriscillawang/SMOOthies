@@ -8,6 +8,15 @@ func _ready():
 	update_amount_label("dragonfruit")
 	update_amount_label("milk")
 	update_amount_label("ice")
+	check_ingredient_oz()
+
+func check_ingredient_oz():
+	var total_ingredient = Global.mango_recipe_amount + Global.pineapple_recipe_amount + Global.dragonfruit_recipe_amount + Global.milk_recipe_amount + Global.ice_recipe_amount
+	$OzLabel.text = str(total_ingredient) + " oz out of 16 oz of ingredients selected."
+	if (total_ingredient == 16):
+		$ConfirmRecipeButton.disabled = false
+	else:
+		$ConfirmRecipeButton.disabled = true
 
 func _on_BackToStoreButton_pressed():
 	SceneLoader._change_scene("Ingredients")
@@ -22,6 +31,7 @@ func _on_ConfirmRecipeButton_pressed():
 	pass # Replace with function body.
 	
 func update_amount_label(ingredient):
+	check_ingredient_oz()
 	if (ingredient == "mango"):
 		$Mango/MangoAmountRecipe.text = str(Global.mango_recipe_amount)
 	elif( ingredient == "pineapple"):

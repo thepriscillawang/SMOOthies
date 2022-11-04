@@ -1,5 +1,6 @@
 extends Node2D
 
+var total_ingredients_oz = 0
 
 func update_ingredient_label(ingredient):
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
@@ -40,10 +41,10 @@ func _ready():
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	$EventLabel.text = "Upcoming Event: " + str(Global.special_events[Global.curr_day - 1].event)
 	
+	
 func _load_Ingredients():
 	var Ingredients = SceneLoader._load_scene("Ingredients")
 	Ingredients.name = "Ingredients"
-
 
 func _on_ConfirmPurchase_pressed():
 	_play_sound()
