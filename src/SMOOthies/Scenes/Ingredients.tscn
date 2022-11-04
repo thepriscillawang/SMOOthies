@@ -142,11 +142,11 @@ margin_bottom = 430.0
 
 [node name="IngredientsMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -11.361
+volume_db = -8.302
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-volume_db = -11.361
+volume_db = -10.05
 
 [node name="ConfirmPurchase" type="TextureButton" parent="."]
 margin_left = 408.0

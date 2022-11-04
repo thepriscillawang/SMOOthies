@@ -152,3 +152,4 @@ func _on_AddCup_pressed():
 
 func _on_HelpButton_pressed():
 	SceneLoader._change_scene("IngredientsHelp")
+	
