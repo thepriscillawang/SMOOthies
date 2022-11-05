@@ -12,6 +12,7 @@ margin_top = 230.0
 margin_right = 760.0
 margin_bottom = 244.0
 text = "Play Again"
+align = 1
 
 [node name="PlayAgainButton" type="Button" parent="."]
 margin_left = 488.0
