@@ -77,8 +77,10 @@ func update_money(amount, add_or_sub):
 	var curr_money = Global.curr_money
 	if (add_or_sub == "add"):
 		Global.curr_money = Global.curr_money - amount
+		Global.total_expenses = Global.total_expenses + amount
 	elif (add_or_sub =="sub"):
 		Global.curr_money = Global.curr_money + amount
+		Global.total_expenses = Global.total_expenses - amount
 	
 func update_inventory(ingredient, add_or_sub):
 	if (ingredient == "mango"):
@@ -155,3 +157,4 @@ func calculate_cups_made_with_ingredients(max_sold_num):
 			print("stopped counting. total cups made: " + str(num_cups))
 			var money_made = num_cups * 10
 			Global.curr_money = Global.curr_money + money_made
+			Global.total_income = Global.total_income +  money_made #update total income

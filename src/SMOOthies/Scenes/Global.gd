@@ -50,8 +50,8 @@ func _reset_values():
 	reset_curr_ingredients()
 	curr_day = 0
 	curr_money = 100.00
-	total_income = 100
-	total_expenses = 70
+	total_income = 0
+	total_expenses = 0
 	special_events = []
 	reset_inventory()
 
