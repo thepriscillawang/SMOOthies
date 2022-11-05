@@ -27,8 +27,7 @@ func update_ingredient_label(ingredient):
 func _ready():
 	#update day
 	Global.curr_day = Global.curr_day + 1
-	
-	print("in ready")
+
 	update_ingredient_label("mango")
 	update_ingredient_label("pineapple")
 	update_ingredient_label("dragonfruit")
