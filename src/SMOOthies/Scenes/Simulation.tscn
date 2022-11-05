@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
+[ext_resource path="res://images/button_fast-forward_pressed.png" type="Texture" id=3]
+[ext_resource path="res://images/button_fast-forward.png" type="Texture" id=4]
+[ext_resource path="res://images/button_fast-forward_hover.png" type="Texture" id=5]
 
 [node name="Simulation" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -15,11 +18,14 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
 
-[node name="FastForwardButton" type="Button" parent="."]
-margin_left = 463.0
-margin_top = 552.0
-margin_right = 555.0
-margin_bottom = 572.0
-text = "Fast Forward"
+[node name="FastForwardButton" type="TextureButton" parent="."]
+margin_left = 443.0
+margin_top = 540.0
+margin_right = 615.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
