@@ -51,7 +51,7 @@ valign = 1
 
 [node name="RecipeHelp" type="RichTextLabel" parent="."]
 margin_left = 155.0
-margin_top = 209.0
+margin_top = 187.0
 margin_right = 867.0
 margin_bottom = 422.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
