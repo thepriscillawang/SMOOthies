@@ -6,11 +6,10 @@
 [ext_resource path="res://sounds/DramaButtonSound.wav" type="AudioStream" id=4]
 [ext_resource path="res://images/IntroBKG1024_r.png" type="Texture" id=5]
 [ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://fonts/honey_mints/Honey Mints.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://fonts/milky_coffee/Milky Coffee.otf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
-size = 64
-outline_size = 1
+size = 34
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -29,11 +28,14 @@ texture = ExtResource( 5 )
 
 [node name="IntroTitle" type="Label" parent="IntroPage"]
 margin_left = 381.0
-margin_top = 71.0
+margin_top = 83.0
 margin_right = 644.0
-margin_bottom = 136.0
+margin_bottom = 148.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Introduction"
+align = 1
+valign = 1
 
 [node name="Premises" type="RichTextLabel" parent="IntroPage"]
 margin_left = 98.0
