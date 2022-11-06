@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://images/button_fast-forward_disabled.png" type="Texture" id=13]
 [ext_resource path="res://images/Character_01_01.png" type="Texture" id=14]
 [ext_resource path="res://images/Character_01_02.png" type="Texture" id=15]
+[ext_resource path="res://images/Character_01_03.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -38,7 +39,7 @@ font_data = ExtResource( 8 )
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -122,10 +123,9 @@ margin_bottom = 85.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 154, 382 )
+[node name="Character_01" type="AnimatedSprite" parent="."]
+position = Vector2( 184, 394 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
