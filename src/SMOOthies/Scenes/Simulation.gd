@@ -24,15 +24,23 @@ var minute = 0
 var week = 0
 
 func _physics_process(_delta):
-	$Clock.text = str(hour) + " : " + str(int(minute)) + " " + am_pm
+	var minute_string = ""
+	if minute < 10:
+		minute_string = "0" + str(int(minute))
+	else: 
+		minute_string = str(int(minute))
+	$Clock.text = str(hour) + " : " + minute_string + " " + am_pm
 	minute += 1
-	if minute == 60:
+	if int(minute) == 60:
 		minute = 0
 		hour += 1
 	if hour == 12:
 		am_pm = "pm"
 	if hour == 13:
 		hour = 1
+	if hour == 7:
+		$Timer.stop()
+		$Timer.emit_signal("timeout")
 
 	
 func _on_Timer_timeout():
