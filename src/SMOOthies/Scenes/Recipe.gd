@@ -31,8 +31,12 @@ func _on_HelpIngredientButton_pressed():
 	pass # Replace with function body.
 
 func _on_ConfirmRecipeButton_pressed():
+	$IngredientsMusic.connect("finished", self, "_load_Simulation_scene")
+	$IngredientsMusic.play()
+	
+func _load_Simulation_scene():
 	SceneLoader._change_scene("Simulation")
-	pass # Replace with function body.
+	
 	
 func update_amount_label(ingredient):
 	check_ingredient_oz()
