@@ -19,8 +19,11 @@ func check_ingredient_oz():
 		$ConfirmRecipeButton.disabled = true
 
 func _on_BackToStoreButton_pressed():
+	$IngredientsMusic.connect("finished", self, "_load_Ingredients_scene")
+	$IngredientsMusic.play()
+
+func _load_Ingredients_scene():
 	SceneLoader._change_scene("Ingredients")
-	pass # Replace with function body.
 	
 
 func _on_HelpIngredientButton_pressed():
