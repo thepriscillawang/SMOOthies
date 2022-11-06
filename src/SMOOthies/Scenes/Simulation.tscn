@@ -64,4 +64,23 @@ text = "Tropical"
 align = 1
 valign = 1
 
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 10.0
+autostart = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 37.0
+margin_right = 112.0
+margin_bottom = 51.0
+text = "Clock:"
+
+[node name="Clock" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 60.0
+margin_right = 112.0
+margin_bottom = 74.0
+
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
