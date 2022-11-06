@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://images/button_normal-speed.png" type="Texture" id=11]
 [ext_resource path="res://images/button_normal-speed_disabled.png" type="Texture" id=12]
 [ext_resource path="res://images/button_fast-forward_disabled.png" type="Texture" id=13]
+[ext_resource path="res://images/Character_01_01.png" type="Texture" id=14]
+[ext_resource path="res://images/Character_01_02.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -33,6 +35,14 @@ font_data = ExtResource( 8 )
 [sub_resource type="DynamicFont" id=4]
 size = 18
 font_data = ExtResource( 8 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Simulation" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -79,7 +89,7 @@ text = "SMOOthies"
 align = 1
 valign = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Tropical" type="Label" parent="."]
 margin_left = 434.0
 margin_top = 464.0
 margin_right = 591.0
@@ -95,7 +105,7 @@ process_mode = 0
 wait_time = 60.0
 autostart = true
 
-[node name="Label2" type="Label" parent="."]
+[node name="ClockTitle" type="Label" parent="."]
 margin_left = 72.0
 margin_top = 37.0
 margin_right = 112.0
@@ -111,6 +121,12 @@ margin_right = 112.0
 margin_bottom = 85.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 154, 382 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
 [connection signal="pressed" from="NormalSpeedButton" to="." method="_on_NormalSpeedButton_pressed"]
