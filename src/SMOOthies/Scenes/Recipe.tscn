@@ -283,6 +283,8 @@ margin_right = 532.0
 margin_bottom = 428.0
 custom_colors/font_color = Color( 0.490196, 0.00784314, 0.00784314, 1 )
 custom_fonts/font = SubResource( 12 )
+align = 1
+valign = 1
 
 [node name="OzLabel2" type="Label" parent="."]
 margin_left = 226.0
@@ -292,6 +294,8 @@ margin_bottom = 475.0
 custom_colors/font_color = Color( 0.0235294, 0.509804, 0.639216, 1 )
 custom_fonts/font = SubResource( 13 )
 text = "Make sure you have exactly 16 oz of ingredients in each cup."
+align = 1
+valign = 1
 
 [node name="IngredientsMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
