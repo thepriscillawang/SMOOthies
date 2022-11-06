@@ -1,24 +1,46 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/ReportOpenStore.gd" type="Script" id=1]
+[ext_resource path="res://images/button_play-again_pressed.png" type="Texture" id=2]
+[ext_resource path="res://images/button_play-again_hover.png" type="Texture" id=3]
+[ext_resource path="res://images/button_play-again.png" type="Texture" id=4]
+[ext_resource path="res://images/IntroBKG1024_r.png" type="Texture" id=5]
+[ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+font_data = ExtResource( 6 )
 
 [node name="ReportOpenStore" type="Node2D"]
 position = Vector2( 2, 7 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 512.0 ]
+}
 
-[node name="OpenStoreLabel" type="Label" parent="."]
-margin_left = 109.0
-margin_top = 213.0
-margin_right = 974.0
-margin_bottom = 244.0
+[node name="ReportOpenStoreBKG" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="OpenStoreLabel" type="RichTextLabel" parent="."]
+margin_left = 108.0
+margin_top = 204.0
+margin_right = 916.0
+margin_bottom = 310.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 1 )
 text = "	Congratulations! You did it! You successfully earned at least $500 to establish your SMOOthie storefront on Kalakaua Avenue. Great job!
 "
 
-[node name="PlayAgainButton" type="Button" parent="."]
-margin_left = 488.0
-margin_top = 393.0
-margin_right = 557.0
-margin_bottom = 413.0
-text = "Play Again"
+[node name="PlayAgainButton" type="TextureButton" parent="."]
+margin_left = 427.0
+margin_top = 416.0
+margin_right = 631.0
+margin_bottom = 470.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
