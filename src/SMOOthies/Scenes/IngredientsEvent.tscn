@@ -11,10 +11,12 @@
 size = 34
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
+size = 21
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 21
 font_data = ExtResource( 5 )
 
 [node name="IngredientsEvent" type="Node2D"]
@@ -53,20 +55,20 @@ text = "Inventory Loses"
 align = 1
 valign = 1
 
-[node name="IngredientsEventLabel" type="Label" parent="."]
-margin_left = 416.0
-margin_top = 207.0
-margin_right = 598.0
-margin_bottom = 221.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
+[node name="IngredientsEventLabel" type="RichTextLabel" parent="."]
+margin_left = 234.0
+margin_top = 206.0
+margin_right = 767.0
+margin_bottom = 285.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Ingredient event added here"
 
 [node name="Ice Melt" type="Label" parent="."]
-margin_left = 317.0
-margin_top = 289.0
-margin_right = 693.0
-margin_bottom = 303.0
+margin_left = 232.0
+margin_top = 342.0
+margin_right = 774.0
+margin_bottom = 368.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Oh, no! All of your ice has melted. You’ll need to buy more."

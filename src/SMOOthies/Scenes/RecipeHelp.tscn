@@ -13,8 +13,7 @@ size = 34
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 28
-outline_color = Color( 0, 0, 0, 1 )
+size = 18
 font_data = ExtResource( 2 )
 
 [node name="Help" type="Node2D"]
@@ -55,7 +54,7 @@ margin_top = 187.0
 margin_right = 867.0
 margin_bottom = 422.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/mono_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "It is your job to alter the recipe by changing ingredient amounts so that the combination is what customers like the best. Listen to what they have to say.
 
 You will sell each 16 oz. cup of smoothie for $10. Make sure you are not adding more ingredients than needed in each cup! Also be sure to keep an eye on the cost of ingredients per cup.

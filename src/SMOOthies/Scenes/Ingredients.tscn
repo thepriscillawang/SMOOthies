@@ -13,18 +13,23 @@
 [ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="DynamicFont" id=1]
+size = 21
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 21
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 21
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 21
 font_data = ExtResource( 11 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 21
 font_data = ExtResource( 11 )
 
 [node name="Ingredients" type="Node2D"]
@@ -54,11 +59,13 @@ margin_bottom = 84.0
 text = "+"
 
 [node name="CurrMangoLabel" type="Label" parent="IngredientsPurchase"]
-margin_left = 652.016
+margin_left = 641.001
 margin_top = 62.0
-margin_right = 692.016
+margin_right = 681.001
 margin_bottom = 76.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 
 [node name="SubPineapple" type="Button" parent="IngredientsPurchase"]
 margin_left = 569.0
@@ -75,11 +82,13 @@ margin_bottom = 155.0
 text = "+"
 
 [node name="CurrPineappleLabel" type="Label" parent="IngredientsPurchase"]
-margin_left = 653.016
+margin_left = 642.001
 margin_top = 134.0
-margin_right = 693.016
+margin_right = 682.001
 margin_bottom = 148.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 
 [node name="SubDragonfruit" type="Button" parent="IngredientsPurchase"]
 margin_left = 568.0
@@ -96,11 +105,13 @@ margin_bottom = 224.0
 text = "+"
 
 [node name="CurrDragonfruitLabel" type="Label" parent="IngredientsPurchase"]
-margin_left = 651.016
+margin_left = 640.001
 margin_top = 206.0
-margin_right = 691.016
+margin_right = 680.001
 margin_bottom = 220.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 
 [node name="SubMilk" type="Button" parent="IngredientsPurchase"]
 margin_left = 569.0
@@ -117,11 +128,13 @@ margin_bottom = 294.0
 text = "+"
 
 [node name="CurrMilkLabel" type="Label" parent="IngredientsPurchase"]
-margin_left = 651.016
+margin_left = 640.001
 margin_top = 273.0
-margin_right = 691.016
+margin_right = 680.001
 margin_bottom = 287.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 
 [node name="SubIce" type="Button" parent="IngredientsPurchase"]
 margin_left = 568.0
@@ -138,11 +151,13 @@ margin_bottom = 366.0
 text = "+"
 
 [node name="CurrIceLabel" type="Label" parent="IngredientsPurchase"]
-margin_left = 649.016
+margin_left = 638.001
 margin_top = 344.0
-margin_right = 689.016
+margin_right = 678.001
 margin_bottom = 358.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 
 [node name="SubCup" type="Button" parent="IngredientsPurchase"]
 margin_left = 568.0
@@ -159,11 +174,13 @@ margin_bottom = 438.0
 text = "+"
 
 [node name="CurrCupLabel" type="Label" parent="IngredientsPurchase"]
-margin_left = 649.016
+margin_left = 638.001
 margin_top = 416.0
-margin_right = 689.016
+margin_right = 678.001
 margin_bottom = 430.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
 
 [node name="IngredientsMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
@@ -174,19 +191,19 @@ stream = ExtResource( 6 )
 volume_db = -10.05
 
 [node name="ConfirmPurchase" type="TextureButton" parent="."]
-margin_left = 408.0
-margin_top = 474.0
-margin_right = 615.0
-margin_bottom = 531.0
+margin_left = 556.743
+margin_top = 484.0
+margin_right = 763.743
+margin_bottom = 541.0
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 5 )
 
 [node name="HelpButton" type="TextureButton" parent="."]
-margin_left = 709.948
-margin_top = 478.0
-margin_right = 813.948
-margin_bottom = 538.0
+margin_left = 836.116
+margin_top = 488.0
+margin_right = 940.116
+margin_bottom = 548.0
 rect_scale = Vector2( 0.8, 0.8 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 8 )
@@ -194,25 +211,25 @@ texture_hover = ExtResource( 9 )
 
 [node name="DayLabel" type="Label" parent="."]
 margin_left = 118.158
-margin_top = 482.0
+margin_top = 489.0
 margin_right = 158.158
-margin_bottom = 501.0
+margin_bottom = 515.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 
 [node name="MoneyLabel" type="Label" parent="."]
 margin_left = 230.307
-margin_top = 482.0
+margin_top = 489.0
 margin_right = 270.307
-margin_bottom = 501.0
+margin_bottom = 515.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 
 [node name="EventLabel" type="Label" parent="."]
 margin_left = 117.156
-margin_top = 515.0
+margin_top = 539.0
 margin_right = 157.156
-margin_bottom = 534.0
+margin_bottom = 565.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 
@@ -223,7 +240,7 @@ margin_right = 895.061
 margin_bottom = 42.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Purchase more supplies:"
+text = "Purchase more:"
 
 [node name="MangoPrice" type="Label" parent="YouCanBuy"]
 margin_left = 23.0307
@@ -289,6 +306,8 @@ margin_right = 94.9932
 margin_bottom = 49.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+valign = 1
 
 [node name="CurrPineapple" type="Label" parent="YouHave"]
 margin_left = -5.007
@@ -297,6 +316,8 @@ margin_right = 94.993
 margin_bottom = 115.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+valign = 1
 
 [node name="CurrDragonfruit" type="Label" parent="YouHave"]
 margin_left = -5.007
@@ -305,6 +326,8 @@ margin_right = 94.993
 margin_bottom = 185.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+valign = 1
 
 [node name="CurrMilk" type="Label" parent="YouHave"]
 margin_left = -5.00668
@@ -313,6 +336,8 @@ margin_right = 94.9933
 margin_bottom = 259.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+valign = 1
 
 [node name="CurrIce" type="Label" parent="YouHave"]
 margin_left = -5.007
@@ -321,6 +346,8 @@ margin_right = 94.993
 margin_bottom = 329.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+valign = 1
 
 [node name="CurrCup" type="Label" parent="YouHave"]
 margin_left = -5.007
@@ -329,6 +356,8 @@ margin_right = 105.993
 margin_bottom = 401.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 1
+valign = 1
 
 [connection signal="pressed" from="IngredientsPurchase/SubMangos" to="." method="_on_SubMangos_pressed"]
 [connection signal="pressed" from="IngredientsPurchase/AddMangos" to="." method="_on_AddMangos_pressed"]

@@ -14,7 +14,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 72
+size = 18
 font_data = ExtResource( 5 )
 
 [node name="Help2" type="Node2D"]
@@ -55,7 +55,7 @@ margin_top = 164.0
 margin_right = 900.0
 margin_bottom = 470.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_fonts/mono_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "In order to avoid bankruptcy, it is important that you only purchase the items you think you will need each day, although having more is better than running out early.
 
 Inventory: Remember, ice melts, milk spoils, and fruits can either rot or be stolen by birds. 
