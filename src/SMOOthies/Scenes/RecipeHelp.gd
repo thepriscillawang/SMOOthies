@@ -17,5 +17,9 @@ func _ready():
 
 
 func _on_CloseHelp_pressed():
+	$CloseHelpOKButton.connect("finished", self, "_load_Recipe_scene")
+	$CloseHelpOKButton.play()
+	
+func _load_Recipe_scene():
 	SceneLoader._change_scene("Recipe")
-	pass # Replace with function body.
+	

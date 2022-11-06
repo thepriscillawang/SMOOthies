@@ -54,9 +54,11 @@ func _on_NormalSpeedButton_pressed():
 	is_fast_forward = false
 	$FastForwardButton.disabled = false
 	$NormalSpeedButton.disabled = true
+	$SpeedButton.play()
 
 
 func _on_FastForwardButton_pressed():
 	is_fast_forward = true
 	$FastForwardButton.disabled = true
 	$NormalSpeedButton.disabled = false
+	$SpeedButton.play()
