@@ -25,11 +25,13 @@ func _on_BackToStoreButton_pressed():
 func _load_Ingredients_scene():
 	SceneLoader._change_scene("Ingredients")
 	
-
 func _on_HelpIngredientButton_pressed():
+	$IngredientsMusic.connect("finished", self, "_load_RecipeHelp_scene")
+	$IngredientsMusic.play()
+	
+func _load_RecipeHelp_scene():
 	SceneLoader._change_scene("RecipeHelp")
-	pass # Replace with function body.
-
+	
 func _on_ConfirmRecipeButton_pressed():
 	$IngredientsMusic.connect("finished", self, "_load_Simulation_scene")
 	$IngredientsMusic.play()
