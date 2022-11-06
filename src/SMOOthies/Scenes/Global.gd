@@ -1,7 +1,7 @@
 extends Node
 
-var total_days = 14
-var req_amount_to_open_store = 0
+var total_days = 3
+var req_amount_to_open_store = 100
 var special_events = []
 var curr_day_num_cups_sold = 0
 var curr_day_total_pop = 0
@@ -81,10 +81,10 @@ var _events = [
 	{event = "Normal Day", low = 70, high = 110}
 ]
 
-var _ingredient_events = [
+var ingredient_events = [
 	{event = "Bad luck! The milk has spoiled. Make sure to restock!", id = 0},
 	{event = "You got an overripe batch of mangoes! You can’t use rotten fruit. Restock.", id =1},
-	{event = "Thieving birds! They made off with the dragon fruit! Order more.", id = 2}
+	{event = "Thieving birds! They made off with the dragonfruit! Order more.", id = 2}
 ]
 
 #generate random events
