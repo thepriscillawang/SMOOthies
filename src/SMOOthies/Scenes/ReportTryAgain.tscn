@@ -7,11 +7,12 @@ position = Vector2( 2, 7 )
 script = ExtResource( 1 )
 
 [node name="TryAgainLabel" type="Label" parent="."]
-margin_left = 478.0
-margin_top = 230.0
-margin_right = 760.0
-margin_bottom = 244.0
-text = "Play Again"
+margin_left = 273.0
+margin_top = 253.0
+margin_right = 825.0
+margin_bottom = 284.0
+text = "Sorry, you did not make enough to buy a storefront. Do you want to try again? Go for it!
+"
 align = 1
 
 [node name="PlayAgainButton" type="Button" parent="."]
