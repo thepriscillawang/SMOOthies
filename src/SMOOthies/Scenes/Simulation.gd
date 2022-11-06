@@ -3,20 +3,11 @@ extends Node2D
 var is_fast_forward = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$FastForwardButton.disabled = false
+	$NormalSpeedButton.disabled = true
 	Algorithm.calculate_sold_cups()
 	pass # Replace with function body.
 
-func _on_FastForwardButton_pressed():
-	if 	(is_fast_forward):
-		# CHANGE TO FAST FORWARD BUTTON HERE
-		#$FastForwardButton.text = "Fast Forward"
-		is_fast_forward = false
-	else: 
-		# CHANGE TO SLOW DOWN BUTTON HERE
-		#$FastForwardButton.text = "Slow Down"
-		is_fast_forward = true
-	#go_to_report()
-	
 func go_to_report():
 	if (Global.curr_day < Global.total_days):
 		# generate whether or not there is random ingredient event
@@ -57,3 +48,15 @@ func _physics_process(_delta):
 		
 func _on_Timer_timeout():
 	go_to_report()
+
+
+func _on_NormalSpeedButton_pressed():
+	is_fast_forward = false
+	$FastForwardButton.disabled = false
+	$NormalSpeedButton.disabled = true
+
+
+func _on_FastForwardButton_pressed():
+	is_fast_forward = true
+	$FastForwardButton.disabled = true
+	$NormalSpeedButton.disabled = false
