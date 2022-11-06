@@ -7,16 +7,15 @@ func _ready():
 	print("Hi, world!")
 	Global._reset_values()
 	MainMusic.play_music()
-#	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
-#	$WelcomeMusic.play()
-	var copy_of_events = Global._events
+
+	var copy_of_events = Global._events.duplicate(true)
+
 	randomize()
 	for _i in range(14):
 		get_event(copy_of_events)
 		Global.special_events.append(curr_event)
 		copy_of_events.remove(curr_index)
-	print(Global.special_events)
-		
+	print(Global._events)
 func get_event(events_list):
 	curr_index = randi() % events_list.size()
 	curr_event = events_list[curr_index]
