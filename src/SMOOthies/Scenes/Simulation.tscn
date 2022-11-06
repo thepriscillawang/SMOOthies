@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://fonts/hunters/Hunters.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://fonts/batuphat_script/Batuphat Script.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://images/button_normal-speed_hover.png" type="Texture" id=9]
+[ext_resource path="res://images/button_normal-speed_pressed.png" type="Texture" id=10]
+[ext_resource path="res://images/button_normal-speed.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -42,14 +45,24 @@ margin_bottom = 40.0
 texture = ExtResource( 2 )
 
 [node name="FastForwardButton" type="TextureButton" parent="."]
-margin_left = 443.0
+margin_left = 524.0
 margin_top = 540.0
-margin_right = 615.0
+margin_right = 728.0
 margin_bottom = 600.0
 rect_scale = Vector2( 0.8, 0.8 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 5 )
+
+[node name="NormalSpeedButton" type="TextureButton" parent="."]
+margin_left = 337.0
+margin_top = 540.0
+margin_right = 509.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
 
 [node name="SMOOthies" type="Label" parent="."]
 margin_left = 327.0
@@ -96,4 +109,5 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
+[connection signal="pressed" from="NormalSpeedButton" to="." method="_on_FastForwardButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
