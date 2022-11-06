@@ -1,20 +1,26 @@
 extends Node2D
 
+var curr_index
+var curr_event
+
 func _ready():
 	print("Hi, world!")
 	Global._reset_values()
 	MainMusic.play_music()
 #	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
 #	$WelcomeMusic.play()
-	
+	var copy_of_events = Global._events
 	randomize()
 	for _i in range(14):
-		Global.special_events.append(get_events())
+		get_event(copy_of_events)
+		Global.special_events.append(curr_event)
+		copy_of_events.remove(curr_index)
+	print(Global.special_events)
+		
+func get_event(events_list):
+	curr_index = randi() % events_list.size()
+	curr_event = events_list[curr_index]
 
-func get_events():
-	var random_events = Global._events[randi() % Global._events.size()]
-	return random_events
-	
 func _load_Main():
 	var Main = SceneLoader._load_scene("Main")
 	Main.name = "Main"
