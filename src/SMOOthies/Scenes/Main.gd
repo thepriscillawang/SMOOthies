@@ -15,7 +15,6 @@ func _ready():
 		get_event(copy_of_events)
 		Global.special_events.append(curr_event)
 		copy_of_events.remove(curr_index)
-	print(Global._events)
 func get_event(events_list):
 	curr_index = randi() % events_list.size()
 	curr_event = events_list[curr_index]
