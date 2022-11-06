@@ -17,5 +17,9 @@ func _ready():
 
 
 func _on_CloseHelp_pressed():
+	$Buttonsound.connect("finished", self, "_load_Ingredients_scene")
+	$Buttonsound.play()
+	
+
+func _load_Ingredients_scene():
 	SceneLoader._change_scene("Ingredients")
-	pass # Replace with function body.

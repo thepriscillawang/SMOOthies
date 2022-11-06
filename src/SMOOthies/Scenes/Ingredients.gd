@@ -149,6 +149,10 @@ func _on_AddCup_pressed():
 	print("+ Cup pressed. Total Cup: ",  Global.curr_cup)
 	$IngredientsMusic.play()
 
-func _on_HelpButton_pressed():
-	SceneLoader._change_scene("IngredientsHelp")
 	
+func _on_HelpButton_pressed():
+	$IngredientsMusic.connect("finished", self, "_load_IngredientHelp_scene")
+	$IngredientsMusic.play()
+
+func _load_IngredientHelp_scene():
+	SceneLoader._change_scene("IngredientsHelp")

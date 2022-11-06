@@ -20,6 +20,7 @@ size = 21
 font_data = ExtResource( 5 )
 
 [node name="IngredientsEvent" type="Node2D"]
+visible = false
 position = Vector2( 9, -8 )
 script = ExtResource( 1 )
 __meta__ = {

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://images/button_ok.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/IngredientsHelp.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://images/IntroBKG1024_r.png" type="Texture" id=6]
 [ext_resource path="res://fonts/milky_coffee/Milky Coffee.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Sounds/softbutton.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 34
@@ -62,5 +63,8 @@ Inventory: Remember, ice melts, milk spoils, and fruits can either rot or be sto
 
 Customers: During tourist seasons, special events, and school holiday breaks, the beach foot-traffic will be higher than normal. Be sure to plan for extra sales. 
 "
+
+[node name="Buttonsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="CloseHelp" to="." method="_on_CloseHelp_pressed"]
