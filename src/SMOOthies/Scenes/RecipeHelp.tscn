@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/RecipeHelp.gd" type="Script" id=1]
 [ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://images/button_ok_hover.png" type="Texture" id=5]
 [ext_resource path="res://fonts/milky_coffee/Milky Coffee.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://images/button_ok_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/softbutton.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 34
@@ -61,5 +62,8 @@ You will sell each 16 oz. cup of smoothie for $10. Make sure you are not adding 
 
 Your goal is to make $500 in two weeks. Plan your days strategically so that you can be successful!
 "
+
+[node name="CloseHelpOKButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="CloseHelp" to="." method="_on_CloseHelp_pressed"]

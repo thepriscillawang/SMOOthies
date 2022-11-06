@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://images/Character_01_01.png" type="Texture" id=14]
 [ext_resource path="res://images/Character_01_02.png" type="Texture" id=15]
 [ext_resource path="res://images/Character_01_03.png" type="Texture" id=16]
+[ext_resource path="res://Sounds/softbutton.wav" type="AudioStream" id=17]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -126,7 +127,11 @@ custom_fonts/font = SubResource( 4 )
 [node name="Character_01" type="AnimatedSprite" parent="."]
 position = Vector2( 184, 394 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
+
+[node name="SpeedButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
 [connection signal="pressed" from="NormalSpeedButton" to="." method="_on_NormalSpeedButton_pressed"]
