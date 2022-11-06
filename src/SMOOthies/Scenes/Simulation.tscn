@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://images/button_fast-forward_hover.png" type="Texture" id=5]
 [ext_resource path="res://fonts/hunters/Hunters.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://fonts/batuphat_script/Batuphat Script.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -19,6 +20,14 @@ size = 64
 outline_size = 1
 outline_color = Color( 0.392157, 0.0235294, 0.0235294, 1 )
 font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 18
+font_data = ExtResource( 8 )
 
 [node name="Simulation" type="Node2D"]
 position = Vector2( 0, -1 )
@@ -74,13 +83,17 @@ margin_left = 72.0
 margin_top = 37.0
 margin_right = 112.0
 margin_bottom = 51.0
+custom_colors/font_color = Color( 0.847059, 0.929412, 0.968627, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Clock:"
 
 [node name="Clock" type="Label" parent="."]
 margin_left = 72.0
-margin_top = 60.0
+margin_top = 71.0
 margin_right = 112.0
-margin_bottom = 74.0
+margin_bottom = 85.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
 
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
