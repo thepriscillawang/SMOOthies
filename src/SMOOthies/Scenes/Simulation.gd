@@ -1,12 +1,21 @@
 extends Node2D
 
+var is_fast_forward = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Algorithm.calculate_sold_cups()
 	pass # Replace with function body.
 
 func _on_FastForwardButton_pressed():
-	go_to_report()
+	if 	(is_fast_forward):
+		# CHANGE TO FAST FORWARD BUTTON HERE
+		#$FastForwardButton.text = "Fast Forward"
+		is_fast_forward = false
+	else: 
+		# CHANGE TO SLOW DOWN BUTTON HERE
+		#$FastForwardButton.text = "Slow Down"
+		is_fast_forward = true
+	#go_to_report()
 	
 func go_to_report():
 	if (Global.curr_day < Global.total_days):
@@ -30,7 +39,11 @@ func _physics_process(_delta):
 	else: 
 		minute_string = str(int(minute))
 	$Clock.text = str(hour) + " : " + minute_string + " " + am_pm
-	minute += 1
+	if (is_fast_forward):
+		minute += 1
+	else:
+		minute += 0.1
+	
 	if int(minute) == 60:
 		minute = 0
 		hour += 1
@@ -38,10 +51,9 @@ func _physics_process(_delta):
 		am_pm = "pm"
 	if hour == 13:
 		hour = 1
-	if hour == 7:
+	if (hour == 6 && int(minute) == 0):
 		$Timer.stop()
 		$Timer.emit_signal("timeout")
-
-	
+		
 func _on_Timer_timeout():
 	go_to_report()
