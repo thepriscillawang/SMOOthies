@@ -51,7 +51,7 @@ margin_right = 692.0
 margin_bottom = 140.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Inventory Loses"
+text = "Inventory Losses"
 align = 1
 valign = 1
 
