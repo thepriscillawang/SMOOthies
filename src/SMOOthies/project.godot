@@ -12,7 +12,8 @@ config_version=4
 
 config/name="SMOOthies"
 run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://Screen Shot 2022-11-07 at 10.16.20 AM.png"
+config/icon="res://smoothie icon.png"
 
 [autoload]
 
@@ -23,7 +24,8 @@ Algorithm="*res://Scenes/Algorithm.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [gui]
 
