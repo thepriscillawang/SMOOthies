@@ -65,20 +65,20 @@ func reset_inventory():
 
 # a list of special events to generate from
 var _events = [
-	{event ="King Kamehameha Floral Parade", low = 200, high = 250 }, 
-	{event = "Prince Kuhio Festival", low = 200, high = 250}, 
-	{event = "Long Weekend", low = 100, high = 130},
-	{event = "Ironman Triathlon", low = 150, high = 170},
-	{event = "Honolulu Marathon", low = 150, high = 170},
-	{event = "Rainy Day", low = 40, high = 60},
-	{event = "Brown Water Advisory", low = 50, high = 70},
-	{event = "Normal Day", low = 70, high = 110},
-	{event = "Normal Day", low = 70, high = 110},
-	{event = "Normal Day", low = 70, high = 110},
-	{event = "Normal Day", low = 70, high = 110},
-	{event = "Normal Day", low = 70, high = 110},
-	{event = "Normal Day", low = 70, high = 110},
-	{event = "Normal Day", low = 70, high = 110}
+	{event ="King Kamehameha Floral Parade", low = 120, high = 200 }, 
+	{event = "Prince Kuhio Festival", low = 120, high = 200}, 
+	{event = "Long Weekend", low = 70, high = 90},
+	{event = "Ironman Triathlon", low = 100, high = 120},
+	{event = "Honolulu Marathon", low = 100, high = 120},
+	{event = "Rainy Day", low = 20, high = 40},
+	{event = "Brown Water Advisory", low = 30, high = 50},
+	{event = "Normal Day", low = 40, high = 70},
+	{event = "Normal Day", low = 40, high = 70},
+	{event = "Normal Day", low = 40, high = 70},
+	{event = "Normal Day", low = 40, high = 70},
+	{event = "Normal Day", low = 40, high = 70},
+	{event = "Normal Day", low = 40, high = 70},
+	{event = "Normal Day", low = 40, high = 70}
 ]
 
 var ingredient_events = [
