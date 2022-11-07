@@ -63,12 +63,11 @@ func _on_NormalSpeedButton_pressed():
 
 func _on_FastForwardButton_pressed():
 	is_fast_forward = true
-	$Timer2.wait_time = 0.05
+	$Timer2.wait_time = 0.03
 #	$Timer2.start()
 	$FastForwardButton.disabled = true
 	$NormalSpeedButton.disabled = false
 	$SpeedButton.play()
-
 
 var position_x = 0
 var pause_for_purchase = 10

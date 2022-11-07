@@ -1,6 +1,6 @@
 extends Node
 
-var total_days = 3
+var total_days = 14
 var req_amount_to_open_store = 100
 var special_events = []
 var curr_day_num_cups_sold = 0

@@ -52,7 +52,6 @@ func compare_recipes():
 	
 #buy 10 at a time
 func buy_ingredient(ingredient, add_or_sub):
-	print(ingredient)
 	update_inventory(ingredient, add_or_sub)
 	if (ingredient == "mango"):
 		var bulk_price_mango = price_mango * 10

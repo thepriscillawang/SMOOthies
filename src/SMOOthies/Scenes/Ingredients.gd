@@ -5,7 +5,6 @@ var total_ingredients_oz = 0
 func update_ingredient_label(ingredient):
 	$MoneyLabel.text = "$ " + str(Global.curr_money)
 	if (ingredient == "mango"):
-		print("in mango")
 		$IngredientsPurchase/CurrMangoLabel.text = str(Global.curr_mango)
 		$YouHave/CurrMango.text = str(Global.inventory_mango)
 	elif(ingredient ==  "pineapple"):

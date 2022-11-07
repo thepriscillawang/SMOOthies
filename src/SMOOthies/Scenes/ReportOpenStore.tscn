@@ -30,7 +30,7 @@ margin_right = 916.0
 margin_bottom = 310.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
-text = "	Congratulations! You did it! You successfully earned at least $500 to establish your SMOOthie storefront on Kalakaua Avenue. Great job!
+text = "Congratulations! You did it! You successfully earned at least $500 to establish your SMOOthie storefront on Kalakaua Avenue. Great job!
 "
 
 [node name="PlayAgainButton" type="TextureButton" parent="."]
