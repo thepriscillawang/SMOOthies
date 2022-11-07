@@ -136,25 +136,33 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 
 [node name="Character_01" type="AnimatedSprite" parent="."]
-position = Vector2( 184, 394 )
+visible = false
+position = Vector2( 168, 419.5 )
+scale = Vector2( 0.908571, 0.886667 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="Character_02" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 804, 395 )
 frames = SubResource( 6 )
 speed_scale = 1.2
 playing = true
 
 [node name="Character_03" type="AnimatedSprite" parent="."]
-position = Vector2( 638, 396 )
+visible = false
+position = Vector2( 655, 384.5 )
+scale = Vector2( 1.09714, 1.05111 )
 frames = SubResource( 7 )
 frame = 1
 speed_scale = 0.5
 playing = true
 
 [node name="Character_04" type="AnimatedSprite" parent="."]
-position = Vector2( 290, 394 )
+visible = false
+position = Vector2( 343.5, 351 )
+scale = Vector2( 1.30571, 1.19111 )
 frames = SubResource( 8 )
 playing = true
 
@@ -183,6 +191,11 @@ texture_disabled = ExtResource( 12 )
 [node name="SpeedButton" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 17 )
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
 [connection signal="pressed" from="NormalSpeedButton" to="." method="_on_NormalSpeedButton_pressed"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
