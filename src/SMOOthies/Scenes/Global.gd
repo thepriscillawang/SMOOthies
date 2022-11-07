@@ -6,7 +6,7 @@ var special_events = []
 var curr_day_num_cups_sold = 0
 var curr_day_total_pop = 0
 
-var curr_day
+var curr_day = 1
 var curr_money
 var curr_mango
 var curr_pineapple
@@ -45,10 +45,11 @@ func reset_curr_ingredients():
 	curr_milk = 0
 	curr_ice = 0
 	curr_cup = 0
+	curr_day = curr_day + 1
 
 func _reset_values():
 	reset_curr_ingredients()
-	curr_day = 0
+	curr_day = 1
 	curr_money = 100.00
 	total_income = 0
 	total_expenses = 0
