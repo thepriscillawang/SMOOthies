@@ -240,7 +240,7 @@ margin_right = 895.061
 margin_bottom = 42.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Purchase more:"
+text = "Purchase more"
 
 [node name="MangoPrice" type="Label" parent="YouCanBuy"]
 margin_left = 23.0307
@@ -291,13 +291,13 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "10 cups for $1.00"
 
 [node name="YouHave" type="Label" parent="."]
-margin_left = 132.176
+margin_left = 93.1243
 margin_top = 30.0
-margin_right = 232.176
-margin_bottom = 44.0
+margin_right = 256.124
+margin_bottom = 56.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
-text = "You have:"
+text = "Current Inventory"
 
 [node name="CurrMango" type="Label" parent="YouHave"]
 margin_left = -5.00673
