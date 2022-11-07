@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scenes/Simulation.gd" type="Script" id=1]
 [ext_resource path="res://images/BusinessBKG.png" type="Texture" id=2]
@@ -17,6 +17,15 @@
 [ext_resource path="res://images/Character_01_02.png" type="Texture" id=15]
 [ext_resource path="res://images/Character_01_03.png" type="Texture" id=16]
 [ext_resource path="res://Sounds/softbutton.wav" type="AudioStream" id=17]
+[ext_resource path="res://images/Character_04_02.png" type="Texture" id=18]
+[ext_resource path="res://images/Character_04_03.png" type="Texture" id=19]
+[ext_resource path="res://images/Character_04_01.png" type="Texture" id=20]
+[ext_resource path="res://images/Character_02_01.png" type="Texture" id=21]
+[ext_resource path="res://images/Character_02_02.png" type="Texture" id=22]
+[ext_resource path="res://images/Character_02_03.png" type="Texture" id=23]
+[ext_resource path="res://images/Character_03_02.png" type="Texture" id=24]
+[ext_resource path="res://images/Character_03_01.png" type="Texture" id=25]
+[ext_resource path="res://images/Character_03_03.png" type="Texture" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -46,6 +55,30 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 24 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [node name="Simulation" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 1 )
@@ -57,28 +90,6 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
-
-[node name="FastForwardButton" type="TextureButton" parent="."]
-margin_left = 524.0
-margin_top = 540.0
-margin_right = 728.0
-margin_bottom = 600.0
-rect_scale = Vector2( 0.8, 0.8 )
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 3 )
-texture_hover = ExtResource( 5 )
-texture_disabled = ExtResource( 13 )
-
-[node name="NormalSpeedButton" type="TextureButton" parent="."]
-margin_left = 337.0
-margin_top = 540.0
-margin_right = 509.0
-margin_bottom = 600.0
-rect_scale = Vector2( 0.8, 0.8 )
-texture_normal = ExtResource( 11 )
-texture_pressed = ExtResource( 10 )
-texture_hover = ExtResource( 9 )
-texture_disabled = ExtResource( 12 )
 
 [node name="SMOOthies" type="Label" parent="."]
 margin_left = 327.0
@@ -127,12 +138,51 @@ custom_fonts/font = SubResource( 4 )
 [node name="Character_01" type="AnimatedSprite" parent="."]
 position = Vector2( 184, 394 )
 frames = SubResource( 5 )
-frame = 1
 playing = true
+
+[node name="Character_02" type="AnimatedSprite" parent="."]
+position = Vector2( 804, 395 )
+frames = SubResource( 6 )
+speed_scale = 1.2
+playing = true
+
+[node name="Character_03" type="AnimatedSprite" parent="."]
+position = Vector2( 638, 396 )
+frames = SubResource( 7 )
+frame = 1
+speed_scale = 0.5
+playing = true
+
+[node name="Character_04" type="AnimatedSprite" parent="."]
+position = Vector2( 290, 394 )
+frames = SubResource( 8 )
+playing = true
+
+[node name="FastForwardButton" type="TextureButton" parent="."]
+margin_left = 524.0
+margin_top = 540.0
+margin_right = 728.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 13 )
+
+[node name="NormalSpeedButton" type="TextureButton" parent="."]
+margin_left = 337.0
+margin_top = 540.0
+margin_right = 541.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 12 )
 
 [node name="SpeedButton" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 17 )
 
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="FastForwardButton" to="." method="_on_FastForwardButton_pressed"]
 [connection signal="pressed" from="NormalSpeedButton" to="." method="_on_NormalSpeedButton_pressed"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
