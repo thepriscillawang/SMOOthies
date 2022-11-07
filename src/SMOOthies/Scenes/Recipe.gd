@@ -2,7 +2,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("in recipe")
 	update_amount_label("mango")
 	update_amount_label("pineapple")
 	update_amount_label("dragonfruit")

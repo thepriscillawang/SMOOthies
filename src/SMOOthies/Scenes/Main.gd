@@ -4,7 +4,6 @@ var curr_index
 var curr_event
 
 func _ready():
-	print("Hi, world!")
 	Global._reset_values()
 	MainMusic.play_music()
 

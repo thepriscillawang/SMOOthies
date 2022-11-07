@@ -31,17 +31,13 @@ func render_player_recipe():
 func compare_recipes():
 	var perfect_recipe = ["mango","mango","mango","mango","pineapple","pineapple","pineapple","pineapple","pineapple","pineapple","dragonfruit","dragonfruit","dragonfruit","milk","milk","ice"]
 	var player_recipe = render_player_recipe()
-	print(player_recipe)
 	var num_same_item = 0
 	
 	for i in player_recipe:
-		print(i)
 		if perfect_recipe.has(i):
 			#remove 
 			perfect_recipe.remove(i)
-			print(perfect_recipe)
 			num_same_item = num_same_item + 1
-			print("num_same_item: " + str(num_same_item))
 		else:
 			print('nothing to remove')
 	

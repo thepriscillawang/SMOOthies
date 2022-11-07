@@ -146,7 +146,6 @@ playing = true
 visible = false
 position = Vector2( 804, 395 )
 frames = SubResource( 6 )
-frame = 2
 speed_scale = 1.2
 playing = true
 
@@ -155,7 +154,7 @@ visible = false
 position = Vector2( 655, 384.5 )
 scale = Vector2( 1.09714, 1.05111 )
 frames = SubResource( 7 )
-frame = 1
+frame = 2
 speed_scale = 0.5
 playing = true
 
@@ -164,7 +163,7 @@ visible = false
 position = Vector2( 343.5, 351 )
 scale = Vector2( 1.30571, 1.19111 )
 frames = SubResource( 8 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="FastForwardButton" type="TextureButton" parent="."]
