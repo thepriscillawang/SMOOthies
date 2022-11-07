@@ -1,59 +1,118 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Report.gd" type="Script" id=1]
+[ext_resource path="res://images/button_continue_pressed.png" type="Texture" id=2]
+[ext_resource path="res://images/button_continue_hover.png" type="Texture" id=3]
+[ext_resource path="res://fonts/milky_coffee/Milky Coffee.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://fonts/roboto/Roboto-Medium.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://images/IntroBKG1024_r.png" type="Texture" id=6]
+[ext_resource path="res://images/button_continue.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 34
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 18
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 18
+font_data = ExtResource( 5 )
 
 [node name="Report" type="Node2D"]
 position = Vector2( 2, 7 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 231.0 ],
+"_edit_vertical_guides_": [ 512.0 ]
+}
+
+[node name="ReportBKG" type="TextureRect" parent="."]
+margin_left = -1.0
+margin_top = -7.0
+margin_right = 1023.0
+margin_bottom = 593.0
+texture = ExtResource( 6 )
 
 [node name="FinalReport" type="Label" parent="."]
-margin_left = 474.0
-margin_top = 145.0
-margin_right = 550.0
-margin_bottom = 159.0
+margin_left = 416.0
+margin_top = 92.0
+margin_right = 601.0
+margin_bottom = 129.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Final Report"
 
 [node name="Labels" type="Label" parent="."]
-margin_left = 438.0
+margin_left = 374.0
 margin_top = 204.0
-margin_right = 526.0
-margin_bottom = 218.0
+margin_right = 485.0
+margin_bottom = 245.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Total Income:
 Total Expenses:"
 
 [node name="TotalIncome" type="Label" parent="."]
-margin_left = 562.0
-margin_top = 206.0
-margin_right = 661.0
-margin_bottom = 237.0
+margin_left = 526.0
+margin_top = 196.0
+margin_right = 625.0
+margin_bottom = 227.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "0000"
+align = 2
+valign = 1
 
 [node name="TotalExpense" type="Label" parent="."]
-margin_left = 563.0
-margin_top = 225.0
-margin_right = 662.0
-margin_bottom = 256.0
+margin_left = 526.0
+margin_top = 217.0
+margin_right = 625.0
+margin_bottom = 248.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "0000"
+align = 2
+valign = 1
 
 [node name="Label-NetProfitLoss" type="Label" parent="."]
-margin_left = 429.0
-margin_top = 277.0
-margin_right = 528.0
-margin_bottom = 308.0
+margin_left = 373.0
+margin_top = 272.0
+margin_right = 485.0
+margin_bottom = 303.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Net Profit/Loss:"
 
 [node name="NetProfit" type="Label" parent="."]
-margin_left = 562.0
-margin_top = 279.0
-margin_right = 661.0
-margin_bottom = 310.0
+margin_left = 527.0
+margin_top = 266.0
+margin_right = 626.0
+margin_bottom = 297.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
 text = "0000"
+align = 2
+valign = 1
 
-[node name="ContinueButton" type="Button" parent="."]
-margin_left = 488.0
-margin_top = 393.0
-margin_right = 557.0
-margin_bottom = 413.0
-text = "Continue"
+[node name="ContinueButton" type="TextureButton" parent="."]
+margin_left = 431.0
+margin_top = 410.0
+margin_right = 632.0
+margin_bottom = 480.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
