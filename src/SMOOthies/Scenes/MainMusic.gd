@@ -7,5 +7,5 @@ func _ready():
 #	$WelcomeMusic.play()
 
 func play_music():
-	$WelcomeMusic.stream = load("res://sounds/HawaiiDrum.wav")
+	$WelcomeMusic.stream = load("res://Sounds/HawaiiDrum.wav")
 	$WelcomeMusic.play()

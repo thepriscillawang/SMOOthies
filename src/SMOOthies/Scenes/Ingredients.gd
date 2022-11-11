@@ -48,7 +48,7 @@ func _on_ConfirmPurchase_pressed():
 	
 
 func _play_sound():
-	$IngredientsMusic.stream = load("res://sounds/softbutton.wav")
+	$IngredientsMusic.stream = load("res://Sounds/softbutton.wav")
 	$IngredientsMusic.connect("finished", self, "_load_Recipe_scene")
 	$IngredientsMusic.play()
 	
